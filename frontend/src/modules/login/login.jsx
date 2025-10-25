@@ -7,11 +7,11 @@ function Login({ setIsAuthenticated }) {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
-  const [contraseña, setContraseña] = useState("");
+  const [contrasena, setContrasena] = useState("");
   const [error, setError] = useState("");
 
   const handleLogin = async () => {
-    if (!email || !contraseña) {
+    if (!email || !contrasena) {
       setError("Todos los campos son obligatorios");
       return;
     }
@@ -20,7 +20,7 @@ function Login({ setIsAuthenticated }) {
       const res = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, contraseña }),
+        body: JSON.stringify({ email, contrasena }),
       });
 
       const data = await res.json();
@@ -53,8 +53,8 @@ function Login({ setIsAuthenticated }) {
         <input
           type="password"
           placeholder="Contraseña"
-          value={contraseña}
-          onChange={(e) => setContraseña(e.target.value)}
+          value={contrasena}
+          onChange={(e) => setContrasena(e.target.value)}
         />
 
         {error && <p className="error">{error}</p>}

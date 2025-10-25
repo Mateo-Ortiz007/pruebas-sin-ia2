@@ -19,12 +19,12 @@ router.get("/", async (req, res) => {
 // POST /usuarios
 router.post("/", async (req, res) => {
   try {
-    const { nombre, apellido, email, contraseña } = req.body;
+    const { nombre, apellido, email, contrasena } = req.body;
 
-    const hashedPassword = await bcrypt.hash(contraseña, 10);
+    const hashedPassword = await bcrypt.hash(contrasena, 10);
 
     const [result] = await pool.query(
-      "INSERT INTO usuarios (nombre, apellido, email, contraseña) VALUES (?, ?, ?, ?)",
+      "INSERT INTO usuarios (nombre, apellido, email, contrasena) VALUES (?, ?, ?, ?)",
       [nombre, apellido, email, hashedPassword]
     );
 

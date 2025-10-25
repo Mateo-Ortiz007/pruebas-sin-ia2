@@ -8,7 +8,7 @@ function Clientes() {
   const [newNombre, setNewNombre] = useState("");
   const [newApellido, setNewApellido] = useState("");
   const [newEmail, setNewEmail] = useState("");
-  const [newContraseña, setNewContraseña] = useState("");
+  const [newContrasena, setNewContrasena] = useState("");
 
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [clienteToEdit, setClienteToEdit] = useState(null);
@@ -29,7 +29,7 @@ function Clientes() {
 
   // Agregar cliente
   const addCliente = () => {
-    if (!newNombre || !newApellido || !newEmail || !newContraseña) return;
+    if (!newNombre || !newApellido || !newEmail || !newContrasena) return;
 
     fetch(`${API_URL}/clientes/clientes`, {
       method: "POST",
@@ -38,7 +38,7 @@ function Clientes() {
         nombre: newNombre,
         apellido: newApellido,
         email: newEmail,
-        contraseña: newContraseña,
+        contrasena: newContrasena,
       }),
     })
       .then((res) => res.json())
@@ -48,7 +48,7 @@ function Clientes() {
     setNewNombre("");
     setNewApellido("");
     setNewEmail("");
-    setNewContraseña("");
+    setNewContrasena("");
   };
 
   // Abrir modal de edición
@@ -130,8 +130,8 @@ function Clientes() {
       <input
         type="password"
         placeholder="Contraseña"
-        value={newContraseña}
-        onChange={(e) => setNewContraseña(e.target.value)}
+        value={newContrasena}
+        onChange={(e) => setNewContrasena(e.target.value)}
       />
       <button onClick={addCliente}>Agregar Cliente</button>
 

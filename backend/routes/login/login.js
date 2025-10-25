@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
-    const { email, contraseña } = req.body;
+    const { email, contrasena } = req.body;
     const [rows] = await pool.query("SELECT * FROM usuarios WHERE email = ?", [
       email,
     ]);
@@ -15,10 +15,10 @@ router.post("/", async (req, res) => {
       return res.status(401).json({ error: "Usuario no encontrado" });
 
     const user = rows[0];
-    const match = await bcrypt.compare(contraseña, user.contraseña);
-    if (!match) return res.status(401).json({ error: "Contraseña incorrecta" });
+    const match = await bcrypt.compare(contrasena, user.contrasena);
+    if (!match) return res.status(401).json({ error: "Contrasena incorrecta" });
 
-    // Retornamos datos públicos del usuario (sin contraseña)
+    // Retornamos datos públicos del usuario (sin contrasena)
     res.json({ id: user.id, nombre: user.nombre, email: user.email });
   } catch (err) {
     console.error(err);

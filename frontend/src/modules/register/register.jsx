@@ -13,7 +13,7 @@ function Registro() {
   const [newTelefonoDelUsuario, setNewTelefonoDelUsuario] = useState("");
   const [newGeneroDelUsuario, setNewGeneroDelUsuario] = useState("");
   const [newemail, setNewEmail] = useState("");
-  const [newcontraseña, setNewContraseña] = useState("");
+  const [newcontrasena, setNewContrasena] = useState("");
 
   useEffect(() => {
     fetch(`${API_URL}/usuarios`)
@@ -29,7 +29,7 @@ function Registro() {
       !newCedulaDelUsuario ||
       !newTelefonoDelUsuario ||
       !newemail ||
-      !newcontraseña
+      !newcontrasena
     )
       return;
 
@@ -43,7 +43,7 @@ function Registro() {
         telefono: newTelefonoDelUsuario,
         genero: newGeneroDelUsuario,
         email: newemail,
-        contraseña: newcontraseña,
+        contraseña: newcontrasena,
       }),
     })
       .then((res) => res.json())
@@ -56,7 +56,7 @@ function Registro() {
 
     // Limpiar inputs
     setNewEmail("");
-    setNewContraseña("");
+    setNewContrasena("");
   };
 
   return (
@@ -116,8 +116,8 @@ function Registro() {
         <label className="input-label">Contraseña</label>
         <input
           type="password"
-          value={newcontraseña}
-          onChange={(e) => setNewContraseña(e.target.value)}
+          value={newcontrasena}
+          onChange={(e) => setNewContrasena(e.target.value)}
           required
         />
         <button onClick={addUsuario}>Registrarse</button>

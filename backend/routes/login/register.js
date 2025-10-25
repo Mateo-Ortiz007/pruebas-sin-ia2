@@ -17,12 +17,12 @@ router.get("/", async (req, res) => {
 // Registrar usuario
 router.post("/", async (req, res) => {
   try {
-    const { nombre, apellido, cedula, telefono, genero, email, contraseña } =
+    const { nombre, apellido, cedula, telefono, genero, email, contrasena } =
       req.body;
 
     const [result] = await pool.query(
-      "INSERT INTO usuarios (nombre, apellido, cedula, telefono, genero, email, contraseña) VALUES (?, ?, ?, ?, ?, ?, ?)",
-      [nombre, apellido, cedula, telefono, genero, email, contraseña]
+      "INSERT INTO usuarios (nombre, apellido, cedula, telefono, genero, email, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      [nombre, apellido, cedula, telefono, genero, email, contrasena]
     );
 
     res.status(201).json({

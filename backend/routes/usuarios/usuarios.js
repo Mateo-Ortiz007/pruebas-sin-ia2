@@ -20,12 +20,12 @@ router.get("/", async (req, res) => {
 // POST: registrar usuario (register)
 router.post("/", async (req, res) => {
   try {
-    const { nombre, apellido, cedula, telefono, genero, email, contraseña } =
+    const { nombre, apellido, cedula, telefono, genero, email, contrasena } =
       req.body;
-    const hashedPassword = await bcrypt.hash(contraseña, 10);
+    const hashedPassword = await bcrypt.hash(contrasena, 10);
 
     const [result] = await pool.query(
-      "INSERT INTO usuarios (nombre, apellido, cedula, telefono, genero, email, contraseña) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      "INSERT INTO usuarios (nombre, apellido, cedula, telefono, genero, email, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?)",
       [nombre, apellido, cedula, telefono, genero, email, hashedPassword]
     );
 
