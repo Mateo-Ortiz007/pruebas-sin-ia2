@@ -1,0 +1,92 @@
+/* Contenedor principal centrado */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%; /* reducido un 20% desde 1000px */
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+}
+
+/* Caja del formulario */
+.container-login {
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  padding: 24px; /* reducido de 30px un 20% */
+  border-radius: 20px; /* ligeramente más pequeño */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 480px; /* reducido un 20% desde 600px */
+  display: flex;
+  flex-direction: column;
+  gap: 11px; /* reducido un 20% desde 15px */
+  width: 500px;
+  opacity: 1;
+}
+
+/* Título del formulario */
+.container-login h2 {
+  text-align: center;
+  color: #644c4c;
+  margin-bottom: 8px; /* reducido un 20% desde 10px */
+  font-size: 18px;
+  font-weight: 800; /* ligeramente más pequeño */
+}
+
+/* Inputs y select */
+.container-login input,
+.container-login select {
+  padding: 8px; /* reducido un 20% desde 10px */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* reducido un 20% desde 8px */
+  font-size: 12px; /* reducido un 20% desde 14px */
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.container-login input:focus,
+.container-login select:focus {
+  border-color: #007bff;
+}
+
+/* Botón */
+.container-login button {
+  padding: 8px; /* reducido un 20% desde 10px */
+  background-color: #007bff;
+  color: #fff;
+  font-size: 13px; /* reducido un 20% desde 16px */
+  border: none;
+  border-radius: 6px; /* reducido un 20% desde 8px */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.container-login button:hover {
+  background-color: #0056b3;
+}
+
+.container-login button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.input-label {
+  color: #000;
+  font-size: 12px; /* reducido un 20% desde 15px */
+  margin-left: 8px; /* reducido un 20% desde 15px */
+  margin-top: 12px; /* reducido un 20% desde 20px */
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.linea-container {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* opcional, centra verticalmente si hay altura */
+}
+.linea {
+  border: none; /* elimina el borde por defecto */
+  height: 2px; /* grosor de la línea */
+  background-color: #4fa347; /* color de la línea */
+  margin: 10px 0; /* espacio arriba y abajo */
+  width: 100px;
+  display: flex;
+}

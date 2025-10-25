@@ -1,0 +1,131 @@
+.container {
+  width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* separa secciones verticalmente */
+}
+
+/* Título */
+.container h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Formulario de inputs */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 180px; /* tamaño fijo */
+  box-sizing: border-box;
+}
+
+/* Botones */
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #4c55c3;
+}
+
+/* Lista de productos */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* espacio entre productos */
+}
+
+li {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid cadetblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+}
+
+/* Botón lápiz */
+.lapiz {
+  background: transparent;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content h2 {
+  margin: 0;
+  color: #444;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  color: red;
+}

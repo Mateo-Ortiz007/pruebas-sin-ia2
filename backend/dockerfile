@@ -1,0 +1,13 @@
+# DockerFile para backend
+FROM node:20
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+# Solo copia el contenido del backend, no todo el proyecto
+COPY . .
+
+EXPOSE 3001
+CMD ["node", "index.js"]

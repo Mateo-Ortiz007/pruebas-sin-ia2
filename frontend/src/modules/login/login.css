@@ -1,0 +1,77 @@
+/* Contenedor principal centrado */
+body {
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+}
+
+/* Caja del login */
+.login-box {
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Título del login */
+.login-box h2 {
+  text-align: center;
+  color: #644c4c;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Inputs y select */
+.login-box input,
+.login-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  border-color: #007bff;
+}
+
+/* Botón principal */
+.login-box button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
+
+.login-box button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Mensajes de error */
+.login-box .error {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
