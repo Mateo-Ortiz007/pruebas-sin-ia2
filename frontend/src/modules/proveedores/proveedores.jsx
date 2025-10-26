@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./proveedores.css";
 
 function Proveedores() {
-  const API_URL = import.meta.env.VITE_API_URL || "http://192.168.0.9:3001";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [proveedores, setProveedor] = useState([]);
   const [newMarca, setNewMarca] = useState("");

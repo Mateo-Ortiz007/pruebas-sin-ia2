@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 function Login({ setIsAuthenticated }) {
-  const API_URL = import.meta.env.VITE_API_URL || "http://192.168.0.9:3001";
+  const API_URL = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");

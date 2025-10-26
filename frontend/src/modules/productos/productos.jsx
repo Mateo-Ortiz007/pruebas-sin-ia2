@@ -3,7 +3,7 @@ import { FaFilter } from "react-icons/fa";
 import "./productos.css";
 
 function Productos() {
-  const API_URL = import.meta.env.VITE_API_URL || "http://192.168.0.9:3001";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [productos, setProductos] = useState([]);
   const [newNombre, setNewNombre] = useState("");

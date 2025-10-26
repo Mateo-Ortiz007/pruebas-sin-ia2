@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./clientes.css"; // archivo de estilos específico
 
 function Clientes() {
-  const API_URL = import.meta.env.VITE_API_URL || "http://192.168.0.9:3001";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [clientes, setClientes] = useState([]);
   const [newNombre, setNewNombre] = useState("");
