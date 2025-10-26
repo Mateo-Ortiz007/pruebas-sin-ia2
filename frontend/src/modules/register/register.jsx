@@ -5,7 +5,7 @@ import "./register.css";
 function Registro() {
   const API_URL =
     import.meta.env.VITE_API_URL |
-    "https://pruebas-sin-ia2.onrender.com/usuarios";
+    "https://pruebas-sin-ia2.onrender.com/register";
   const navigate = useNavigate(); // inicializamos el hook
 
   const [usuario, setUsuario] = useState([]);
