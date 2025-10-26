@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import productosRoutes from "./routes/backendProductos/productos.js";
 import loginRoutes from "./routes/login/login.js";
 import registerRoutes from "./routes/login/register.js";
 import clientesRoutes from "./routes/clientes/clientes.js";
@@ -17,7 +16,6 @@ app.use(
 app.use(express.json());
 
 // Rutas
-app.use("/productos", productosRoutes);
 app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/proveedores", proveedoresRoutes);
