@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./clientes.css"; // archivo de estilos específico
 
 function Clientes() {
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL =
+    import.meta.env.VITE_API_URL || "https://pruebas-sin-ia2.onrender.com";
 
   const [clientes, setClientes] = useState([]);
   const [newNombre, setNewNombre] = useState("");
