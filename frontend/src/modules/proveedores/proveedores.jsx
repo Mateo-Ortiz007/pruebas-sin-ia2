@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import "./proveedores.css";
 
 function Proveedores() {
-  const API_URL =
-    import.meta.env.VITE_API_URL | "https://pruebas-sin-ia2.onrender.com";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [proveedores, setProveedor] = useState([]);
   const [newMarca, setNewMarca] = useState("");

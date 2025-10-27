@@ -3,8 +3,7 @@ import { FaFilter } from "react-icons/fa";
 import "./productos.css";
 
 function Productos() {
-  const API_URL =
-    import.meta.env.VITE_API_URL | "https://pruebas-sin-ia2.onrender.com";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [productos, setProductos] = useState([]);
   const [newNombre, setNewNombre] = useState("");
