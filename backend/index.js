@@ -4,7 +4,6 @@ import loginRoutes from "./routes/login/login.js";
 import registerRoutes from "./routes/login/register.js";
 import clientesRoutes from "./routes/clientes/clientes.js";
 import proveedoresRoutes from "./routes/proveedores/proveedores.js";
-import usuariosRoutes from "./routes/usuarios/usuarios.js";
 import productos_de_la_tiendaRoutes from "./routes/productos_de_la_tienda/productos_de_la_tienda.js";
 
 const app = express(); // <— declarar app primero
@@ -20,7 +19,6 @@ app.use("/login", loginRoutes);
 app.use("/register", registerRoutes);
 app.use("/proveedores", proveedoresRoutes);
 app.use("/clientes", clientesRoutes);
-app.use("/usuarios", usuariosRoutes);
 app.use("/productos_de_la_tienda", productos_de_la_tiendaRoutes);
 
 // Endpoint raíz
