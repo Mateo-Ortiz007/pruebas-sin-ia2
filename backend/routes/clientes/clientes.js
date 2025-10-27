@@ -4,7 +4,6 @@ import bcrypt from "bcrypt";
 
 const router = express.Router();
 
-// GET /usuarios
 router.get("/", async (req, res) => {
   try {
     const [rows] = await pool.query(
@@ -16,7 +15,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// POST /usuarios
 router.post("/", async (req, res) => {
   try {
     const { nombre, apellido, email, contrasena } = req.body;
@@ -34,7 +32,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-// DELETE /usuarios/:id
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
 

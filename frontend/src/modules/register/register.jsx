@@ -43,7 +43,7 @@ function Registro() {
         telefono: newTelefonoDelUsuario,
         genero: newGeneroDelUsuario,
         email: newemail,
-        contraseña: newcontrasena,
+        contrasena: newcontrasena,
       }),
     })
       .then((res) => res.json())
