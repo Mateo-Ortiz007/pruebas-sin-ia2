@@ -18,7 +18,7 @@ function Registro() {
   const [newcontrasena, setNewContrasena] = useState("");
 
   useEffect(() => {
-    fetch(`${API_URL}/usuarios`)
+    fetch(`${API_URL}/register`)
       .then((res) => res.json())
       .then((data) => setUsuario(data))
       .catch((err) => console.error("Error al obtener usuarios:", err));
