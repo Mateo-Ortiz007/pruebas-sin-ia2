@@ -1,5 +1,6 @@
 import express from "express";
-import { pool } from "../../conexion.js"; // tu conexión a MySQL
+import { pool } from "../../conexion.js";
+import bcrypt from "bcrypt";
 
 const router = express.Router();
 
@@ -14,15 +15,18 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Registrar usuario
+// Registrar usuario con bcrypt
 router.post("/", async (req, res) => {
   try {
     const { nombre, apellido, cedula, telefono, genero, email, contrasena } =
       req.body;
 
+    // Hashear la contraseña
+    const hashedPassword = await bcrypt.hash(contrasena, 10);
+
     const [result] = await pool.query(
       "INSERT INTO usuarios (nombre, apellido, cedula, telefono, genero, email, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?)",
-      [nombre, apellido, cedula, telefono, genero, email, contrasena]
+      [nombre, apellido, cedula, telefono, genero, email, hashedPassword]
     );
 
     res.status(201).json({
