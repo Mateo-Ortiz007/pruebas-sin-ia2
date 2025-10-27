@@ -1,9 +1,9 @@
 import express from "express";
 import { pool } from "../../conexion.js";
-import bcrypt from "bcrypt";
 
 const router = express.Router();
 
+// POST: login
 router.post("/", async (req, res) => {
   try {
     const { email, contrasena } = req.body;
@@ -15,10 +15,11 @@ router.post("/", async (req, res) => {
       return res.status(401).json({ error: "Usuario no encontrado" });
 
     const user = rows[0];
-    const match = await bcrypt.compare(contrasena, user.contrasena);
-    if (!match) return res.status(401).json({ error: "Contrasena incorrecta" });
 
-    // Retornamos datos públicos del usuario (sin contrasena)
+    // Comparación simple de contraseñas
+    if (user.contrasena !== contrasena)
+      return res.status(401).json({ error: "Contraseña incorrecta" });
+
     res.json({ id: user.id, nombre: user.nombre, email: user.email });
   } catch (err) {
     console.error(err);

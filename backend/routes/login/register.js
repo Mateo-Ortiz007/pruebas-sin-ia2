@@ -1,10 +1,9 @@
 import express from "express";
 import { pool } from "../../conexion.js";
-import bcrypt from "bcrypt";
 
 const router = express.Router();
 
-// Obtener todos los usuarios
+// GET: obtener todos los usuarios
 router.get("/", async (req, res) => {
   try {
     const [rows] = await pool.query("SELECT * FROM usuarios");
@@ -15,18 +14,15 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Registrar usuario con bcrypt
+// POST: registrar usuario (sin hash)
 router.post("/", async (req, res) => {
   try {
     const { nombre, apellido, cedula, telefono, genero, email, contrasena } =
       req.body;
 
-    // Hashear la contraseña
-    const hashedPassword = await bcrypt.hash(contrasena, 10);
-
     const [result] = await pool.query(
       "INSERT INTO usuarios (nombre, apellido, cedula, telefono, genero, email, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?)",
-      [nombre, apellido, cedula, telefono, genero, email, hashedPassword]
+      [nombre, apellido, cedula, telefono, genero, email, contrasena]
     );
 
     res.status(201).json({
