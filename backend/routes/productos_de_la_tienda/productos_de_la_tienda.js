@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
     const { nombre, tipo, fecha, precio } = req.body;
 
     const [result] = await pool.query(
-      "INSERT INTO usuarios (nombre, tipo, fecha, precio) VALUES (?, ?, ?, ?,)",
+      "INSERT INTO productos_de_la_tienda (nombre, tipo, fecha, precio) VALUES (?, ?, ?, ?)",
       [nombre, tipo, fecha, precio]
     );
 
