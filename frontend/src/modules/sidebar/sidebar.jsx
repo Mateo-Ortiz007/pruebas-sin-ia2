@@ -24,7 +24,9 @@ function Sidebar() {
           <div className="modal">
             <h3>¿Quieres cerrar sesíon ?</h3>
             <div className="modal-buttons">
-              <button>si</button>
+              <button onClick={handleLogout} className="confirm">
+                si
+              </button>
               <button
                 onClick={() => setExitModalOpen(false)}
                 className="cancel"
