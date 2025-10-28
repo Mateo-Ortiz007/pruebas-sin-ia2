@@ -57,6 +57,7 @@
   transform: none;
 }
 
+/* Modal overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -71,50 +72,41 @@
   animation: fadeIn 0.2s ease-in;
 }
 
-/* Modal overlay */
-/* Modal overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
 /* Modal box */
 .modal {
   background: #fff;
   padding: 25px 30px;
   border-radius: 10px;
-  text-align: center; /* centra el texto */
+  text-align: center;
   max-width: 350px;
   width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra todo */
+  gap: 20px; /* espacio entre texto y botones */
 }
 
 /* Texto del modal */
 .modal h3 {
-  margin-bottom: 20px;
+  margin: 0;
   color: #222;
   font-weight: 600;
   font-size: 20px;
-  text-align: center; /* centra el texto */
+  text-align: center;
 }
 
 /* Botones del modal */
 .modal-buttons {
   display: flex;
-  justify-content: center; /* centra los botones en fila */
+  justify-content: center;
   gap: 15px; /* espacio entre botones */
+  width: 100%;
 }
 
 .modal-buttons button {
-  padding: 8px 20px;
+  flex: 1; /* mismo ancho para los dos */
+  padding: 10px 0;
   border: none;
   border-radius: 5px;
   cursor: pointer;
