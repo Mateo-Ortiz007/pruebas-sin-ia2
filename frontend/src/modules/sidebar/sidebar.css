@@ -106,7 +106,6 @@
 
 .modal-buttons button {
   flex: 1; /* mismo ancho para los dos */
-  padding: 10px 0;
   border: none;
   border-radius: 5px;
   cursor: pointer;
