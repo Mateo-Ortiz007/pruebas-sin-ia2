@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import { useState } from "react";
 import Login from "./modules/login/login";
@@ -14,51 +15,56 @@ import Registro from "./modules/register/register";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const location = useLocation();
 
   return (
-    <Router>
-      <div className="app-layout" style={{ display: "flex" }}>
-        {isAuthenticated && <Sidebar />}
+    <div className="app-layout" style={{ display: "flex" }}>
+      {/* Mostrar sidebar solo si está autenticado y no está en login o registro */}
+      {isAuthenticated &&
+        !["/login", "/registro"].includes(location.pathname) && <Sidebar />}
 
-        <div className="main-content" style={{ flex: 1 }}>
-          <Routes>
-            {/* Redirigir / al login */}
-            <Route path="/" element={<Navigate to="/login" />} />
+      <div className="main-content" style={{ flex: 1 }}>
+        <Routes>
+          {/* Redirigir / al login */}
+          <Route path="/" element={<Navigate to="/login" />} />
 
-            {/* Login */}
-            <Route
-              path="/login"
-              element={<Login setIsAuthenticated={setIsAuthenticated} />}
-            />
-            <Route path="/registro" element={<Registro />} />
+          {/* Login */}
+          <Route
+            path="/login"
+            element={<Login setIsAuthenticated={setIsAuthenticated} />}
+          />
 
-            {/* Rutas protegidas */}
-            <Route
-              path="/productos"
-              element={
-                isAuthenticated ? <Productos /> : <Navigate to="/login" />
-              }
-            />
-            <Route
-              path="/proveedores"
-              element={
-                isAuthenticated ? <Proveedores /> : <Navigate to="/login" />
-              }
-            />
-            <Route
-              path="/clientes"
-              element={
-                isAuthenticated ? <Clientes /> : <Navigate to="/login" />
-              }
-            />
+          {/* Registro */}
+          <Route path="/registro" element={<Registro />} />
 
-            {/* Ruta 404 opcional */}
-            <Route path="*" element={<h1>404 Not Found</h1>} />
-          </Routes>
-        </div>
+          {/* Rutas protegidas */}
+          <Route
+            path="/productos"
+            element={isAuthenticated ? <Productos /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/proveedores"
+            element={
+              isAuthenticated ? <Proveedores /> : <Navigate to="/login" />
+            }
+          />
+          <Route
+            path="/clientes"
+            element={isAuthenticated ? <Clientes /> : <Navigate to="/login" />}
+          />
+
+          {/* Ruta 404 */}
+          <Route path="*" element={<h1>404 Not Found</h1>} />
+        </Routes>
       </div>
-    </Router>
+    </div>
   );
 }
 
-export default App;
+export default function AppWrapper() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
