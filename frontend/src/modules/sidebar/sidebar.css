@@ -49,6 +49,7 @@
   color: white;
   margin-top: auto;
   font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .sidebar button:last-child:hover {
