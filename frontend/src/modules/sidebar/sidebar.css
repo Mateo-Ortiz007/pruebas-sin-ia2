@@ -111,6 +111,7 @@
   cursor: pointer;
   font-size: 16px;
   color: white;
+  height: 40px;
 }
 
 .confirm {
