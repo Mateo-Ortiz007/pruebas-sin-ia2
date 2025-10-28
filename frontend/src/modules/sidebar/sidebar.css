@@ -100,7 +100,7 @@
 .modal-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px; /* espacio entre botones */
+  gap: 5px; /* espacio entre botones */
   width: 100%;
 }
 
