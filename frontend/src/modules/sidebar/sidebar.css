@@ -72,6 +72,7 @@
 }
 
 /* Modal overlay */
+/* Modal overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -83,7 +84,6 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
-  animation: fadeIn 0.2s ease-in;
 }
 
 /* Modal box */
@@ -91,52 +91,43 @@
   background: #fff;
   padding: 25px 30px;
   border-radius: 10px;
-  text-align: center;
+  text-align: center; /* centra el texto */
   max-width: 350px;
   width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: scaleIn 0.2s ease-in;
 }
 
+/* Texto del modal */
 .modal h3 {
-  margin-bottom: 25px;
-  color: #222; /* más visible que #333 */
-  font-weight: 600; /* título más destacado */
-  font-size: 20px; /* un poco más grande */
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center; /* centra el texto */
 }
 
 /* Botones del modal */
 .modal-buttons {
   display: flex;
-  justify-content: center; /* centra los botones */
-  gap: 20px; /* espacio igual entre ellos */
+  justify-content: center; /* centra los botones en fila */
+  gap: 15px; /* espacio entre botones */
 }
 
 .modal-buttons button {
-  flex: 1; /* mismo tamaño */
-  padding: 10px 0;
+  padding: 8px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 500;
-  transition: transform 0.1s, background 0.2s;
+  color: white;
 }
 
-.modal-buttons button:hover {
-  transform: scale(1.05);
-}
-
-/* Confirm button */
 .confirm {
   background-color: #e74c3c;
-  color: white;
 }
 
-/* Cancel button */
 .cancel {
   background-color: #95a5a6;
-  color: white;
 }
 
 /* Animaciones */
