@@ -86,7 +86,7 @@ function Proveedores() {
   const deleteProvider = () => {
     if (!proveedortoDelete) return;
 
-    fetch(`${API_URL}/proveedores/${proveedoresToEdit.id}`, {
+    fetch(`${API_URL}/proveedores/${proveedortoDelete.id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
