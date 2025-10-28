@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
-
+import { useState } from "react";
 function Sidebar() {
+  const [ExitOpenModal, setExitModalOpen] = useState(false);
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("isAuthenticated"); // elimina el login guardado
@@ -17,6 +18,23 @@ function Sidebar() {
 
       <hr />
       <button onClick={handleLogout}>🔒 Cerrar sesión</button>
+
+      {ExitOpenModal && (
+        <div className="modal-overlar">
+          <div className="modal">
+            <h3>¿Quieres cerrar sesíon ?</h3>
+            <div className="modal-buttons">
+              <button>si</button>
+              <button
+                onClick={() => setExitModalOpen(false)}
+                className="cancel"
+              >
+                No
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
