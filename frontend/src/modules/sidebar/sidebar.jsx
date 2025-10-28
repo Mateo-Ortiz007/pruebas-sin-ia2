@@ -17,7 +17,7 @@ function Sidebar() {
       <button onClick={() => navigate("/clientes")}>👥 Clientes</button>
 
       <hr />
-      <button onClick={handleLogout}>🔒 Cerrar sesión</button>
+      <button onClick={() => setExitModalOpen(true)}>🔒 Cerrar sesión</button>
 
       {ExitOpenModal && (
         <div className="modal-overlar">
