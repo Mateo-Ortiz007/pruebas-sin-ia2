@@ -1,4 +1,4 @@
-.container {
+.container-products {
   width: 800px;
   margin: 50px auto;
   padding: 40px;
@@ -12,7 +12,7 @@
 }
 
 /* Título */
-.container h1 {
+.container-products h1 {
   text-align: center;
   color: #333;
 }
@@ -24,10 +24,10 @@
   gap: 10px;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
+.container-products input[type="text"],
+.container-products input[type="date"],
+.container-products input[type="number"],
+.container-products select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -36,7 +36,7 @@ select {
 }
 
 /* Botones */
-button {
+.container-products button {
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
@@ -46,12 +46,12 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+.container-products button:hover {
   background-color: #4c55c3;
 }
 
 /* Lista de productos */
-ul {
+.container-products ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -59,7 +59,7 @@ ul {
   gap: 10px; /* espacio entre productos */
 }
 
-li {
+.container-products li {
   background: #fff;
   padding: 10px 15px;
   border-radius: 8px;
@@ -72,7 +72,7 @@ li {
 }
 
 /* Botón lápiz */
-.lapiz {
+.container-products .lapiz {
   background: transparent;
   color: #333;
   font-size: 16px;
@@ -81,7 +81,7 @@ li {
 }
 
 /* Modal */
-.modal {
+.container-products .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@ li {
   z-index: 1000;
 }
 
-.modal-content {
+.container-products .modal-content {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -106,12 +106,12 @@ li {
   gap: 10px;
 }
 
-.modal-content h2 {
+.container-products .modal-content h2 {
   margin: 0;
   color: #444;
 }
 
-.modal-content input {
+.container-products .modal-content input {
   width: 100%;
   padding: 6px 8px;
   border-radius: 6px;
@@ -119,13 +119,13 @@ li {
   box-sizing: border-box;
 }
 
-.modal-content button {
+.container-products .modal-content button {
   padding: 8px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
 }
 
-label {
+.container-products label {
   color: red;
 }

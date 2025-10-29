@@ -1,4 +1,4 @@
-.container {
+.container-provider {
   width: 800px;
   margin: 50px auto;
   padding: 40px;
@@ -70,7 +70,7 @@ li {
 }
 
 /* Modal */
-.modal {
+.modal-provider {
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@ li {
   justify-content: center;
 }
 
-.modal-content {
+.modal-content-provider {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -91,17 +91,17 @@ li {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content h2 {
+.modal-content-provider h2 {
   margin-bottom: 15px;
   color: #444;
 }
 
-.modal-content input {
+.modal-content-provider input {
   margin: 8px 0;
   width: 100%;
 }
 
-.modal-content button {
+.modal-content-provider button {
   margin-top: 10px;
 }
 

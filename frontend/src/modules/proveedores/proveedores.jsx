@@ -101,7 +101,7 @@ function Proveedores() {
   };
 
   return (
-    <div className="container">
+    <div className="container-provider">
       <h1>Proveedores</h1>
 
       {/* Formulario agregar proveedor */}
@@ -140,8 +140,8 @@ function Proveedores() {
 
       {/* Modal de edición */}
       {editedModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal-provider">
+          <div className="modal-content-provider">
             <h2>Editar proveedor</h2>
             <input
               type="text"
