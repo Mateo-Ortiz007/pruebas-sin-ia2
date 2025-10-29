@@ -40,34 +40,37 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
-        <h2>Iniciar Sesión</h2>
+    <div className="body-container">
+      <div className="login-container">
+        <div className="login-box">
+          <h2>Iniciar Sesión</h2>
 
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={contrasena}
-          onChange={(e) => setContrasena(e.target.value)}
-        />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+          />
 
-        {error && <p className="error">{error}</p>}
+          {error && <p className="error">{error}</p>}
 
-        <button onClick={handleLogin}>Ingresar</button>
+          <button onClick={handleLogin}>Ingresar</button>
 
-        <button
-          onClick={() => navigate("/registro")}
-          style={{ marginTop: "10px", backgroundColor: "#28a745" }}
-        >
-          Ir a Registro
-        </button>
+          <button
+            onClick={() => navigate("/registro")}
+            style={{ marginTop: "10px", backgroundColor: "#28a745" }}
+          >
+            Ir a Registro
+          </button>
+        </div>
       </div>
+      <div className="right-side"></div>
     </div>
   );
 }

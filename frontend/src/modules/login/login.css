@@ -1,14 +1,23 @@
 /* Contenedor principal centrado */
-body {
+body,
+.body-container {
   background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  height: 100vh;
+  display: flex;
+  margin: 0;
 }
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  width: 50%;
+}
+
+.right-side {
+  width: 50%;
+  background: linear-gradient(135deg, #81c784, #64b5f6);
 }
 
 /* Caja del login */
@@ -17,7 +26,7 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 15px;
