@@ -116,6 +116,7 @@
 .confirm {
   background-color: #e74c3c;
   height: 35px;
+  padding: 15px;
 }
 
 .cancel {
