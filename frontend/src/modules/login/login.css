@@ -1,20 +1,22 @@
-/* Contenedor principal centrado */
 body,
 .body-container {
-  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  margin: 0;
   height: 100vh;
   display: flex;
-  margin: 0;
 }
 
+/* Lado izquierdo: login pegado a la izquierda */
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
   width: 50%;
+  display: flex;
+  flex-direction: column; /* para que quede arriba */
+  justify-content: flex-start; /* arriba */
+  align-items: flex-start; /* pegado a la izquierda */
+  padding: 50px; /* margen interno */
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
 }
 
+/* Lado derecho: libre o decorativo */
 .right-side {
   width: 50%;
   background: linear-gradient(135deg, #81c784, #64b5f6);
@@ -22,11 +24,12 @@ body,
 
 /* Caja del login */
 .login-box {
-  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 100%; /* ocupa todo el contenedor izquierdo */
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 15px;
