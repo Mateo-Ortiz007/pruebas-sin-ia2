@@ -1,25 +1,14 @@
-body,
-.body-container {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-}
-
-/* Lado derecho: login pegado a la derecha */
-.login-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column; /* mantiene los elementos en columna */
-  justify-content: flex-start; /* arriba */
-  align-items: flex-end; /* pegado a la derecha */
-  padding: 50px; /* margen interno */
+/* Contenedor principal centrado */
+body {
   background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
 }
 
-/* Lado izquierdo: libre o decorativo */
-.lefth-side {
-  width: 30%;
-  background: linear-gradient(135deg, #81c784, #64b5f6);
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
 }
 
 /* Caja del login */
@@ -28,8 +17,7 @@ body,
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%; /* ocupa todo el contenedor derecho */
-  max-width: 500px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -38,7 +26,7 @@ body,
 /* Título del login */
 .login-box h2 {
   text-align: center;
-  color: #644c4c; /* mantiene el color original */
+  color: #644c4c;
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: 600;
