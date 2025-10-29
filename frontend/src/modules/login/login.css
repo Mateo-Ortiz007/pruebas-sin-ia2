@@ -17,7 +17,7 @@ body,
 }
 
 /* Lado izquierdo: libre o decorativo */
-.right-side {
+.lefth-side {
   width: 50%;
   background: linear-gradient(135deg, #81c784, #64b5f6);
 }

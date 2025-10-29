@@ -70,7 +70,7 @@ function Login({ setIsAuthenticated }) {
           </button>
         </div>
       </div>
-      <div className="right-side"></div>
+      <div className="lefth-side"></div>
     </div>
   );
 }
