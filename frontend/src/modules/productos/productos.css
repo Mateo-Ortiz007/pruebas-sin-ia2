@@ -1,5 +1,4 @@
-/* Contenedor principal */
-.products-container {
+.container {
   width: 800px;
   margin: 50px auto;
   padding: 40px;
@@ -9,60 +8,58 @@
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* separa secciones verticalmente */
 }
 
-.products-container h1 {
+/* Título */
+.container h1 {
   text-align: center;
   color: #333;
-  margin: 0;
 }
 
-/* Formulario */
-.products-form {
+/* Formulario de inputs */
+.form-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.products-form input,
-.products-form select {
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 180px;
+  width: 180px; /* tamaño fijo */
   box-sizing: border-box;
-  font-size: 14px;
 }
 
 /* Botones */
-.products-form button,
-.products-container ul button {
+button {
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
   background-color: #646cff;
   color: white;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: 0.2s;
 }
 
-.products-form button:hover,
-.products-container ul button:hover {
+button:hover {
   background-color: #4c55c3;
 }
 
 /* Lista de productos */
-.products-list {
+ul {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; /* espacio entre productos */
 }
 
-.products-list li {
+li {
   background: #fff;
   padding: 10px 15px;
   border-radius: 8px;
@@ -72,11 +69,10 @@
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
-  gap: 10px;
 }
 
-/* Botón editar */
-.edit-button {
+/* Botón lápiz */
+.lapiz {
   background: transparent;
   color: #333;
   font-size: 16px;
@@ -107,41 +103,29 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .modal-content h2 {
   margin: 0;
   color: #444;
-  font-size: 20px;
-  text-align: center;
 }
 
 .modal-content input {
   width: 100%;
-  padding: 8px;
+  padding: 6px 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-size: 14px;
 }
 
 .modal-content button {
-  padding: 10px;
+  padding: 8px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.2s;
 }
 
-.modal-content button:hover {
-  background-color: #646cff;
-  color: white;
-}
-
-/* Labels de error */
-.error-label {
+label {
   color: red;
-  font-size: 13px;
 }
