@@ -90,7 +90,7 @@
 /* Texto del modal */
 .modal h3 {
   margin: 0;
-  color: #222;
+  color: #f5f5f5;
   font-weight: 600;
   font-size: 20px;
   text-align: center;
@@ -111,15 +111,16 @@
   cursor: pointer;
   font-size: 16px;
   color: white;
-  height: 40px;
 }
 
 .confirm {
   background-color: #e74c3c;
+  height: 40px;
 }
 
 .cancel {
   background-color: #95a5a6;
+  height: 40px;
 }
 
 /* Animaciones */
