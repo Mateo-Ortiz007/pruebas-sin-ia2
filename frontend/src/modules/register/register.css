@@ -1,5 +1,5 @@
 /* Contenedor principal centrado */
-.container-Register-global {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 /* Caja del formulario */
-.container-register {
+.container-login {
   background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
   padding: 24px; /* reducido de 30px un 20% */
   border-radius: 20px; /* ligeramente más pequeño */
@@ -23,7 +23,7 @@
 }
 
 /* Título del formulario */
-.container-register h2 {
+.container-login h2 {
   text-align: center;
   color: #644c4c;
   margin-bottom: 8px; /* reducido un 20% desde 10px */
@@ -32,8 +32,8 @@
 }
 
 /* Inputs y select */
-.container-register input,
-.container-register select {
+.container-login input,
+.container-login select {
   padding: 8px; /* reducido un 20% desde 10px */
   border: 1px solid #ccc;
   border-radius: 6px; /* reducido un 20% desde 8px */
@@ -42,13 +42,13 @@
   transition: border-color 0.2s;
 }
 
-.container-register input:focus,
-.container-register select:focus {
+.container-login input:focus,
+.container-login select:focus {
   border-color: #007bff;
 }
 
 /* Botón */
-.container-register button {
+.container-login button {
   padding: 8px; /* reducido un 20% desde 10px */
   background-color: #007bff;
   color: #fff;
@@ -59,11 +59,11 @@
   transition: background-color 0.2s;
 }
 
-.container-register button:hover {
+.container-login button:hover {
   background-color: #0056b3;
 }
 
-.container-register button:disabled {
+.container-login button:disabled {
   background-color: #aaa;
   cursor: not-allowed;
 }
