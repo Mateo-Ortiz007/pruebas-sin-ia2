@@ -105,23 +105,22 @@
 }
 
 .modal-buttons button {
-  flex: 1; /* mismo ancho para los dos */
+  flex: 1; /* mismo ancho */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   color: white;
+  padding: 10px 15px; /* mismo padding para todos */
+  height: auto; /* que la altura dependa del padding */
 }
 
 .confirm {
   background-color: #e74c3c;
-  height: 35px;
-  padding: 5px 15px;
 }
 
 .cancel {
   background-color: #95a5a6;
-  height: 40px;
 }
 
 /* Animaciones */
