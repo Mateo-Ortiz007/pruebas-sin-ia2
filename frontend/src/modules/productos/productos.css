@@ -1,3 +1,4 @@
+/* Contenedor principal de productos */
 .container-products {
   width: 800px;
   margin: 50px auto;
@@ -8,13 +9,14 @@
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* separa secciones verticalmente */
+  gap: 20px;
 }
 
 /* Título */
 .container-products h1 {
   text-align: center;
   color: #333;
+  margin: 0;
 }
 
 /* Formulario de inputs */
@@ -31,11 +33,12 @@
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 180px; /* tamaño fijo */
+  width: 180px;
   box-sizing: border-box;
+  font-size: 14px;
 }
 
-/* Botones */
+/* Botones generales */
 .container-products button {
   padding: 8px 12px;
   border: none;
@@ -43,7 +46,7 @@
   background-color: #646cff;
   color: white;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.2s;
 }
 
 .container-products button:hover {
@@ -54,9 +57,10 @@
 .container-products ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* espacio entre productos */
+  gap: 10px;
 }
 
 .container-products li {
@@ -69,9 +73,10 @@
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Botón lápiz */
+/* Botón lápiz (editar) */
 .container-products .lapiz {
   background: transparent;
   color: #333;
@@ -80,7 +85,7 @@
   border: none;
 }
 
-/* Modal */
+/* Modal overlay */
 .container-products .modal {
   position: fixed;
   top: 0;
@@ -94,6 +99,7 @@
   z-index: 1000;
 }
 
+/* Contenido del modal */
 .container-products .modal-content {
   background: #fff;
   padding: 20px;
@@ -103,29 +109,44 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
+/* Título del modal */
 .container-products .modal-content h2 {
   margin: 0;
   color: #444;
+  font-size: 20px;
+  text-align: center;
 }
 
+/* Inputs del modal */
 .container-products .modal-content input {
   width: 100%;
-  padding: 6px 8px;
+  padding: 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-size: 14px;
 }
 
+/* Botones del modal */
 .container-products .modal-content button {
-  padding: 8px;
+  padding: 10px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
 }
 
+.container-products .modal-content button:hover {
+  background-color: #646cff;
+  color: white;
+}
+
+/* Labels de error */
 .container-products label {
   color: red;
+  font-size: 13px;
 }
