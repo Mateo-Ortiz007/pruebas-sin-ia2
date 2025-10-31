@@ -2,6 +2,8 @@
 body {
   width: 100vh;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .right-side {
