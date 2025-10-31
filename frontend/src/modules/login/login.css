@@ -1,28 +1,24 @@
-/* Contenedor principal centrado */
+/* Contenedor principal dividido en dos columnas */
 body {
-  width: 100vh;
-  display: flex;
   margin: 0;
   padding: 0;
-}
-
-.right-side {
-  width: 50%;
-  background-color: #fff;
+  height: 100vh;
   display: flex;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Lado izquierdo: login */
 .login-container {
+  flex: 1; /* ocupa la mitad de la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
 }
 
 /* Caja del login */
 .login-box {
-  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  background: #fff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -41,7 +37,7 @@ body {
   font-weight: 600;
 }
 
-/* Inputs y select */
+/* Inputs */
 .login-box input,
 .login-box select {
   padding: 10px;
@@ -83,4 +79,13 @@ body {
   color: red;
   font-size: 13px;
   text-align: center;
+}
+
+/* Lado derecho: espacio para imagen */
+.right-side {
+  flex: 1; /* ocupa la otra mitad de la pantalla */
+  background-color: #fff; /* fondo blanco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

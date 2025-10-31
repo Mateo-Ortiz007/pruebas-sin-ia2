@@ -40,8 +40,8 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div>
-      <div className="login-container">
+    <div className="login-page">
+      <div className="left-side">
         <div className="login-box">
           <h2>Iniciar Sesión</h2>
 
@@ -70,7 +70,8 @@ function Login({ setIsAuthenticated }) {
           </button>
         </div>
       </div>
-      <div className="rigth-side"></div>
+
+      <div className="right-side">{/* Aquí puedes poner tu imagen */}</div>
     </div>
   );
 }
