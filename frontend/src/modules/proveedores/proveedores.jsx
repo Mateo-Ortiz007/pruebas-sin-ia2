@@ -126,14 +126,19 @@ function Proveedores() {
       <button onClick={addProvider}>Agregar</button>
 
       {/* Lista de proveedores */}
-      <ul>
+      <ul className="lista-proveedores">
         {proveedores.map((prov) => (
-          <li key={prov.id}>
+          <li key={prov.id} className="item-proveedor">
             {prov.marca} - {prov.tipo_de_productos} - {prov.empresa}
-            <button onClick={() => openEditModal(prov)}>Editar</button>
-            <button onClick={() => confirmDeleteProvider(prov)}>
-              Eliminar
-            </button>
+            <div>
+              <button
+                className="boton-lapiz"
+                onClick={() => openEditModal(prov)}
+              >
+                ✏️
+              </button>
+              <button onClick={() => confirmDeleteProvider(prov)}>🗑️</button>
+            </div>
           </li>
         ))}
       </ul>
@@ -141,7 +146,7 @@ function Proveedores() {
       {/* Modal de edición */}
       {editedModalOpen && (
         <div className="modal-proveedores">
-          <div className="modal-content">
+          <div className="modal-contenido">
             <h2>Editar proveedor</h2>
             <input
               type="text"
@@ -167,7 +172,7 @@ function Proveedores() {
       {/* Modal de confirmación de eliminación */}
       {deleteModalOpen && (
         <div className="modal-proveedores">
-          <div className="modal-content-proveedores">
+          <div className="modal-contenido">
             <h2>¿Eliminar proveedor?</h2>
             <p>
               {proveedortoDelete?.marca} -{" "}

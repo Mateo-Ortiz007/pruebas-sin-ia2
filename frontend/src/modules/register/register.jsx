@@ -63,7 +63,7 @@ function Registro() {
     <div className="container-for-register">
       <div className="container-register">
         <h2>Register</h2>
-        <div className="linea-container">
+        <div className="linea-register">
           <hr className="linea" />
         </div>
         <label className="input-label">Nombre</label>
@@ -83,7 +83,6 @@ function Registro() {
         <label className="input-label">Cedula</label>
         <input
           type="number"
-          maxLength="10"
           value={newCedulaDelUsuario}
           onChange={(e) => setNewCedulaDelUsuario(e.target.value)}
           required
@@ -91,7 +90,6 @@ function Registro() {
         <label className="input-label">Telefono</label>
         <input
           type="number"
-          maxLength="10"
           value={newTelefonoDelUsuario}
           onChange={(e) => setNewTelefonoDelUsuario(e.target.value)}
           required

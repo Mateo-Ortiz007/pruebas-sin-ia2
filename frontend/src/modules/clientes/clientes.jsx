@@ -140,8 +140,10 @@ function Clientes() {
         {clientes.map((cliente) => (
           <li key={cliente.id}>
             {cliente.nombre} {cliente.apellido} - {cliente.email}
-            <button onClick={() => openEditModal(cliente)}>Editar</button>
-            <button onClick={() => confirmDelete(cliente)}>Eliminar</button>
+            <div>
+              <button onClick={() => openEditModal(cliente)}>Editar</button>
+              <button onClick={() => confirmDelete(cliente)}>Eliminar</button>
+            </div>
           </li>
         ))}
       </ul>
@@ -174,8 +176,8 @@ function Clientes() {
 
       {/* Modal de confirmación de eliminación */}
       {deleteModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal-clientes">
+          <div className="modal-content-clientes">
             <h2>¿Eliminar Cliente?</h2>
             <p>
               {clienteToDelete?.nombre} {clienteToDelete?.apellido} -{" "}
