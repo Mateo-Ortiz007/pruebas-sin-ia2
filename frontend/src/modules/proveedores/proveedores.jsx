@@ -101,7 +101,7 @@ function Proveedores() {
   };
 
   return (
-    <div className="container-proveedores">
+    <div className="container">
       <h1>Proveedores</h1>
 
       {/* Formulario agregar proveedor */}
@@ -126,27 +126,22 @@ function Proveedores() {
       <button onClick={addProvider}>Agregar</button>
 
       {/* Lista de proveedores */}
-      <ul className="lista-proveedores">
+      <ul>
         {proveedores.map((prov) => (
-          <li key={prov.id} className="item-proveedor">
+          <li key={prov.id}>
             {prov.marca} - {prov.tipo_de_productos} - {prov.empresa}
-            <div>
-              <button
-                className="boton-lapiz"
-                onClick={() => openEditModal(prov)}
-              >
-                ✏️
-              </button>
-              <button onClick={() => confirmDeleteProvider(prov)}>🗑️</button>
-            </div>
+            <button onClick={() => openEditModal(prov)}>Editar</button>
+            <button onClick={() => confirmDeleteProvider(prov)}>
+              Eliminar
+            </button>
           </li>
         ))}
       </ul>
 
       {/* Modal de edición */}
       {editedModalOpen && (
-        <div className="modal-proveedores">
-          <div className="modal-contenido">
+        <div className="modal">
+          <div className="modal-content">
             <h2>Editar proveedor</h2>
             <input
               type="text"
@@ -171,8 +166,8 @@ function Proveedores() {
 
       {/* Modal de confirmación de eliminación */}
       {deleteModalOpen && (
-        <div className="modal-proveedores">
-          <div className="modal-contenido">
+        <div className="modal">
+          <div className="modal-content">
             <h2>¿Eliminar proveedor?</h2>
             <p>
               {proveedortoDelete?.marca} -{" "}

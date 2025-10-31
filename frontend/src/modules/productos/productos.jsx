@@ -111,36 +111,42 @@ function Productos() {
         );
 
   return (
-    <div className="container-productos">
+    <div className="container">
       <h1>Productos</h1>
+
       <input
         type="text"
         value={newNombre}
         placeholder="Ingrese el nombre del nuevo producto"
         onChange={(e) => setNewNombre(e.target.value)}
       />
+
       <input
         type="text"
         value={newtipo}
         placeholder="Ingrese el tipo del nuevo producto"
         onChange={(e) => setNewTipo(e.target.value)}
       />
+
       <input
         type="date"
         value={newFecha}
         placeholder="Ingrese la fecha de caducidad del nuevo producto"
         onChange={(e) => setNewFecha(e.target.value)}
       />
+
       <input
         type="number"
         value={newprecio}
         placeholder="Ingrese el precio del producto"
         onChange={(e) => setNewPrecio(e.target.value)}
       />
+
       <button onClick={addProduct}>Agregar</button>
+
       {editedModalOpen && (
-        <div className="modal-productos">
-          <div className="modal-content-productos">
+        <div className="modal">
+          <div className="modal-content">
             <h2>Editar producto</h2>
             <input
               type="text"
@@ -167,9 +173,10 @@ function Productos() {
           </div>
         </div>
       )}
+
       {deleteModalOpen && (
-        <div className="modal-productos">
-          <div className="modal-content-productos">
+        <div className="modal">
+          <div className="modal-content">
             <h2>¿Eliminar producto?</h2>
             <p>¿Estás seguro de eliminar "{productToDelete?.nombre}"?</p>
             <button onClick={deleteProduct}>Sí, eliminar</button>
@@ -177,6 +184,7 @@ function Productos() {
           </div>
         </div>
       )}
+
       <div
         style={{
           display: "flex",
@@ -197,6 +205,7 @@ function Productos() {
           ))}
         </select>
       </div>
+
       <ul>
         {filterProducts.map((producto) => (
           <li key={producto.id}>

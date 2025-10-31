@@ -105,7 +105,7 @@ function Clientes() {
   };
 
   return (
-    <div className="container-clientes">
+    <div className="container">
       <h1>Clientes</h1>
 
       {/* Formulario agregar cliente */}
@@ -140,18 +140,16 @@ function Clientes() {
         {clientes.map((cliente) => (
           <li key={cliente.id}>
             {cliente.nombre} {cliente.apellido} - {cliente.email}
-            <div>
-              <button onClick={() => openEditModal(cliente)}>Editar</button>
-              <button onClick={() => confirmDelete(cliente)}>Eliminar</button>
-            </div>
+            <button onClick={() => openEditModal(cliente)}>Editar</button>
+            <button onClick={() => confirmDelete(cliente)}>Eliminar</button>
           </li>
         ))}
       </ul>
 
       {/* Modal de edición */}
       {editModalOpen && (
-        <div className="modal-clientes">
-          <div className="modal-content-clientes">
+        <div className="modal">
+          <div className="modal-content">
             <h2>Editar Cliente</h2>
             <input
               type="text"
@@ -176,8 +174,8 @@ function Clientes() {
 
       {/* Modal de confirmación de eliminación */}
       {deleteModalOpen && (
-        <div className="modal-clientes">
-          <div className="modal-content-clientes">
+        <div className="modal">
+          <div className="modal-content">
             <h2>¿Eliminar Cliente?</h2>
             <p>
               {clienteToDelete?.nombre} {clienteToDelete?.apellido} -{" "}
