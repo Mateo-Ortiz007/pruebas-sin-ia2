@@ -40,7 +40,7 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="login-page">
+    <div className="login-container">
       <div className="left-side">
         <div className="login-box">
           <h2>Iniciar Sesión</h2>
