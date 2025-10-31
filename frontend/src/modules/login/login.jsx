@@ -41,7 +41,6 @@ function Login({ setIsAuthenticated }) {
 
   return (
     <div>
-      <div className="rigth-side"></div>
       <div className="login-container">
         <div className="login-box">
           <h2>Iniciar Sesión</h2>
@@ -71,6 +70,7 @@ function Login({ setIsAuthenticated }) {
           </button>
         </div>
       </div>
+      <div className="rigth-side"></div>
     </div>
   );
 }
