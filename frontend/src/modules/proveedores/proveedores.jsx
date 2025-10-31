@@ -101,7 +101,7 @@ function Proveedores() {
   };
 
   return (
-    <div className="container">
+    <div className="container-proveedores">
       <h1>Proveedores</h1>
 
       {/* Formulario agregar proveedor */}
@@ -140,7 +140,7 @@ function Proveedores() {
 
       {/* Modal de edición */}
       {editedModalOpen && (
-        <div className="modal">
+        <div className="modal-proveedores">
           <div className="modal-content">
             <h2>Editar proveedor</h2>
             <input
@@ -166,8 +166,8 @@ function Proveedores() {
 
       {/* Modal de confirmación de eliminación */}
       {deleteModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal-proveedores">
+          <div className="modal-content-proveedores">
             <h2>¿Eliminar proveedor?</h2>
             <p>
               {proveedortoDelete?.marca} -{" "}

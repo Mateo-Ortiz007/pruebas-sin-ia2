@@ -1,15 +1,15 @@
-.container {
+.container-clientes {
   width: 400px;
   margin: 40px auto;
   font-family: Arial, sans-serif;
 }
 
-h1 {
+.container-clientes h1 {
   text-align: center;
   color: #333;
 }
 
-input {
+.container-clientes input {
   display: block;
   width: 100%;
   margin: 8px 0;
@@ -19,7 +19,7 @@ input {
   font-size: 14px;
 }
 
-button {
+.container-clientes button {
   margin-top: 10px;
   padding: 10px 15px;
   background-color: #007bff;
@@ -30,17 +30,17 @@ button {
   font-size: 14px;
 }
 
-button:hover {
+.container-clientes button:hover {
   background-color: #0056b3;
 }
 
-ul {
+.container-clientes ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
-li {
+.container-clientes li {
   background: #f9f9f9;
   margin-bottom: 8px;
   padding: 8px;
@@ -49,15 +49,14 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-
-li button {
+.container-clientes li button {
   margin-left: 5px;
   padding: 5px 8px;
   font-size: 12px;
 }
 
 /* Modal */
-.modal {
+.modal-clientes {
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +68,7 @@ li button {
   align-items: center;
 }
 
-.modal-content {
+.modal-content-clientes {
   background: white;
   padding: 20px;
   border-radius: 10px;

@@ -1,4 +1,4 @@
-.container {
+.container-proveedores {
   width: 800px;
   margin: 50px auto;
   padding: 40px;
@@ -10,17 +10,17 @@
 }
 
 /* Título */
-.container h1 {
+.container-proveedores h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
 /* Inputs y botones */
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
+.container-proveedores input[type="text"],
+.container-proveedores input[type="date"],
+.container-proveedores input[type="number"],
+.container-proveedores select {
   padding: 8px;
   margin: 5px;
   border: 1px solid #ccc;
@@ -28,7 +28,7 @@ select {
   width: calc(100% - 20px);
 }
 
-button {
+.container-proveedores button {
   margin: 5px;
   padding: 8px 12px;
   border: none;
@@ -39,17 +39,17 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+.container-proveedores button:hover {
   background-color: #4c55c3;
 }
 
 /* Lista de productos */
-ul {
+.container-proveedores ul {
   list-style: none;
   padding: 0;
 }
 
-li {
+.container-proveedores li {
   background: #fff;
   margin: 8px 0;
   padding: 10px 12px;
@@ -70,7 +70,7 @@ li {
 }
 
 /* Modal */
-.modal {
+.modal-proveedores {
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@ li {
   justify-content: center;
 }
 
-.modal-content {
+.modal-content-proveedores {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -91,17 +91,17 @@ li {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content h2 {
+.modal-content-proveedores h2 {
   margin-bottom: 15px;
   color: #444;
 }
 
-.modal-content input {
+.modal-content-proveedores input {
   margin: 8px 0;
   width: 100%;
 }
 
-.modal-content button {
+.modal-content-proveedores button {
   margin-top: 10px;
 }
 

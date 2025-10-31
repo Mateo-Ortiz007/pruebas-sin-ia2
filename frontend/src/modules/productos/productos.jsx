@@ -111,7 +111,7 @@ function Productos() {
         );
 
   return (
-    <div className="container">
+    <div className="container-productos">
       <h1>Productos</h1>
 
       <input
@@ -175,8 +175,8 @@ function Productos() {
       )}
 
       {deleteModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal-productos">
+          <div className="modal-content-productos">
             <h2>¿Eliminar producto?</h2>
             <p>¿Estás seguro de eliminar "{productToDelete?.nombre}"?</p>
             <button onClick={deleteProduct}>Sí, eliminar</button>

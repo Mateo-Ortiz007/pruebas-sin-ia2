@@ -1,4 +1,4 @@
-.container {
+.container-productos {
   width: 800px;
   margin: 50px auto;
   padding: 40px;
@@ -12,7 +12,7 @@
 }
 
 /* Título */
-.container h1 {
+.container-productos h1 {
   text-align: center;
   color: #333;
 }
@@ -24,10 +24,10 @@
   gap: 10px;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
+.container-productos input[type="text"],
+.container-productos input[type="date"],
+.container-productos input[type="number"],
+.container-productos select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -36,7 +36,7 @@ select {
 }
 
 /* Botones */
-button {
+.container-productos button {
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
@@ -46,12 +46,12 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+.container-productos button:hover {
   background-color: #4c55c3;
 }
 
 /* Lista de productos */
-ul {
+.container-productos ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -59,7 +59,7 @@ ul {
   gap: 10px; /* espacio entre productos */
 }
 
-li {
+.container-productos li {
   background: #fff;
   padding: 10px 15px;
   border-radius: 8px;
@@ -81,7 +81,7 @@ li {
 }
 
 /* Modal */
-.modal {
+.modal-productos {
   position: fixed;
   top: 0;
   left: 0;
@@ -94,7 +94,7 @@ li {
   z-index: 1000;
 }
 
-.modal-content {
+.modal-content-productos {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -106,12 +106,12 @@ li {
   gap: 10px;
 }
 
-.modal-content h2 {
+.modal-content-productos h2 {
   margin: 0;
   color: #444;
 }
 
-.modal-content input {
+.modal-content-productos input {
   width: 100%;
   padding: 6px 8px;
   border-radius: 6px;
@@ -119,7 +119,7 @@ li {
   box-sizing: border-box;
 }
 
-.modal-content button {
+.modal-content-productos button {
   padding: 8px;
   border-radius: 6px;
   border: none;

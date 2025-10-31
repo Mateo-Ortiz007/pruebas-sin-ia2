@@ -1,6 +1,5 @@
 /* Contenedor principal centrado */
 body {
-  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
   width: 100vh;
   display: flex;
 }

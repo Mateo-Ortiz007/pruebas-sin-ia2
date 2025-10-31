@@ -105,7 +105,7 @@ function Clientes() {
   };
 
   return (
-    <div className="container">
+    <div className="container-clientes">
       <h1>Clientes</h1>
 
       {/* Formulario agregar cliente */}
@@ -148,8 +148,8 @@ function Clientes() {
 
       {/* Modal de edición */}
       {editModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal-clientes">
+          <div className="modal-content-clientes">
             <h2>Editar Cliente</h2>
             <input
               type="text"
