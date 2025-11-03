@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
+import tienda2 from "./asset/tienda2.png";
 
 function Login({ setIsAuthenticated }) {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -69,7 +70,10 @@ function Login({ setIsAuthenticated }) {
         </button>
       </div>
 
-      <div className="right-side"></div>
+      <div
+        className="right-side"
+        style={{ backgroundImage: `url(${tienda2})` }}
+      ></div>
     </div>
   );
 }
