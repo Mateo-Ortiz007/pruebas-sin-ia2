@@ -43,7 +43,7 @@ body {
 
 .login-content input {
   font-size: 15px;
-  width: 600px;
+  width: auto;
   padding: 10px;
   border-radius: 7px;
   border: 1px solid #ccc;
