@@ -19,7 +19,7 @@ body {
   background-size: cover; /* hace que llene el área */
   background-position: center; /* centra la imagen */
   height: 100vh; /* ocupa todo el alto */
-  width: 100%;
+  width: 60%;
   margin: 0; /* elimina el espacio que la encogía */
   border-radius: 0; /* opcional, quita bordes */
 }

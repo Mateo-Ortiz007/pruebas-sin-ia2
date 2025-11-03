@@ -42,11 +42,6 @@ function Login({ setIsAuthenticated }) {
 
   return (
     <div className="login">
-      <div
-        className="right-side"
-        style={{ backgroundImage: `url(${tienda2})` }}
-      ></div>
-
       <div className="login-content">
         <h2>SHOP STORE</h2>
         <hr className="linea" />
@@ -73,6 +68,10 @@ function Login({ setIsAuthenticated }) {
           Ir a Registro
         </button>
       </div>
+      <div
+        className="right-side"
+        style={{ backgroundImage: `url(${tienda2})` }}
+      ></div>
     </div>
   );
 }
