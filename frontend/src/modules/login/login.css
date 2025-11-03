@@ -39,7 +39,7 @@ body {
   max-width: 400px;
   text-align: center;
   height: 100vh;
-  margin: 25px;
+  margin-top: 50px;
 }
 
 .login-content h2 {
