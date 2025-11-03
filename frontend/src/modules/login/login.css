@@ -53,9 +53,9 @@ body {
 /* ======== CAMPOS ======== */
 .login-content label {
   text-align: left;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  width: 100%;
   font-size: 18px;
+  margin-bottom: 5px;
   color: #000;
 }
 
@@ -66,8 +66,8 @@ body {
   border: 1px solid #ccc;
   outline: none;
   width: 100%;
+  margin-bottom: 15px;
   box-sizing: border-box;
-  display: block;
 }
 
 .login-content input:focus {

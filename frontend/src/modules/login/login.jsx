@@ -46,12 +46,14 @@ function Login({ setIsAuthenticated }) {
         <h2>Iniciar Sesión</h2>
         <hr className="linea" />
 
+        <label>Email</label>
         <input
           type="email"
           placeholder="Correo electrónico"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        <label>Password</label>
         <input
           type="password"
           placeholder="Contraseña"
