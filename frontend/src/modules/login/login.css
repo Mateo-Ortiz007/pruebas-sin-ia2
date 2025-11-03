@@ -18,13 +18,16 @@ body {
   background-repeat: no-repeat;
   background-position: center; /* centra la imagen */
   height: 100vh; /* ocupa todo el alto */
+  margin: 0; /* elimina el espacio que la encogía */
   width: 65%;
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
 .login {
   width: 35%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(245, 245, 245);
 }
 
@@ -112,4 +115,10 @@ body {
   color: red;
   font-size: 13px;
   margin-top: 5px;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
