@@ -16,11 +16,12 @@ body {
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   height: 100vh;
   border-radius: 0;
   width: 100%;
+  background-position: center right;
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
