@@ -18,8 +18,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 40px;
-  border-radius: 10px;
+  height: 100vh; /* ocupa todo el alto */
+  border-radius: 0; /* elimina bordes si quieres que cubra todo */
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
