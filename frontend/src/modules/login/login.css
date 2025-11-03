@@ -38,6 +38,7 @@ body {
   width: 80%;
   max-width: 400px;
   text-align: center;
+  height: 100vh;
 }
 
 .login-content h2 {
@@ -101,9 +102,9 @@ body {
 }
 
 /* ======== LÍNEA SEPARADORA ======== */
-.linea {
+.login-content .linea {
   height: 2px;
-  background-color: #000;
+  background-color: #000000;
   width: 100%;
   margin: 20px 0;
   border: none;
