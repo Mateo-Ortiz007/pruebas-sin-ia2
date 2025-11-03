@@ -44,6 +44,7 @@ function Login({ setIsAuthenticated }) {
     <div className="login">
       <div className="login-content">
         <h2>Iniciar Sesión</h2>
+        <hr className="linea" />
 
         <input
           type="email"

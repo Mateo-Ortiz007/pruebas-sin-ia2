@@ -2,9 +2,10 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 /* Lado izquierdo: login */
@@ -28,22 +29,22 @@ body {
 /* Título del login */
 .login-box h2 {
   text-align: center;
-  color: #644c4c;
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: 600;
+  color: #000;
+  font-size: 25px;
+  font-family: sans-serif;
 }
 
 /* Inputs */
 .login-box input,
 .login-box select {
-  width: 100%;
-  box-sizing: border-box;
+  font-size: 15px;
+  width: 600px;
   padding: 10px;
+  border-radius: 7px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
   outline: none;
+  margin-left: 25px;
+  height: 20px;
   transition: border-color 0.2s;
 }
 
@@ -54,12 +55,18 @@ body {
 
 /* Botón principal */
 .login-box button {
-  padding: 12px;
-  background-color: #007bff;
+  display: block;
+  background-color: rgb(223, 62, 13);
+  font-size: 15px;
+  padding: 10px;
+  width: 40%;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-bottom: 35px;
   color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -92,4 +99,14 @@ body {
   height: 100vh;
   background-color: #fff;
   width: 100%;
+}
+
+.linea {
+  border: none; /* elimina el borde por defecto */
+  height: 2px; /* grosor de la línea */
+  background-color: #000; /* color de la línea */
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
