@@ -24,9 +24,7 @@ body {
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
 .login {
   width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   background-color: rgb(245, 245, 245);
 }
 
