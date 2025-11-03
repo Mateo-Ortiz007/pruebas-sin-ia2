@@ -29,8 +29,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(245, 245, 245);
-  margin-left: 15px;
-  margin-top: 15px;
 }
 
 /* ======== CONTENIDO DEL LOGIN ======== */
@@ -41,7 +39,8 @@ body {
   max-width: 400px;
   text-align: center;
   height: 100vh;
-  margin-top: 50px;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 .login-content h2 {
