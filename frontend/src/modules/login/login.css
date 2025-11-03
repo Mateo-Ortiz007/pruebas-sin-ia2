@@ -26,8 +26,8 @@ body {
 .login {
   width: 35%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
   background-color: rgb(245, 245, 245);
 }
 
@@ -35,12 +35,13 @@ body {
 .login-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centra el contenido dentro */
   width: 80%;
   max-width: 400px;
   text-align: center;
-  height: 100vh;
-  margin-left: 15px;
-  margin-top: 15px;
+  height: auto;
+  margin: 0; /* elimina márgenes laterales */
 }
 
 .login-content h2 {
