@@ -83,9 +83,12 @@ body {
 
 /* Lado derecho: espacio para imagen */
 .right-side {
-  flex: 1; /* ocupa la otra mitad de la pantalla */
-  background-color: #fff; /* fondo blanco */
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 70%;
+  width: auto;
+  margin: 80px;
+  background-image: url(asset/tienda2.png);
+  background-repeat: no-repeat;
+  height: 100%;
 }
