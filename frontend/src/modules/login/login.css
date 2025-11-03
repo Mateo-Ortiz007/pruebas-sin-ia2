@@ -38,6 +38,7 @@ body {
   width: 80%;
   max-width: 400px;
   text-align: center;
+  height: 100vh;
 }
 
 .login-content h2 {
