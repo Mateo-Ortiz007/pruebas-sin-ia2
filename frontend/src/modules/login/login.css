@@ -13,11 +13,10 @@ body {
 .right-side {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center left; /* posición final */
+
   height: 100vh;
   width: 100%;
   border-radius: 0;
