@@ -43,8 +43,9 @@ function Login({ setIsAuthenticated }) {
   return (
     <div className="login">
       <div className="login-content">
-        <h2>Iniciar Sesión</h2>
+        <h2>SHOP STORE</h2>
         <hr className="linea" />
+        <h2>Login</h2>
 
         <label>Email</label>
         <input
@@ -60,16 +61,13 @@ function Login({ setIsAuthenticated }) {
           value={contrasena}
           onChange={(e) => setContrasena(e.target.value)}
         />
-
         {error && <p className="error">{error}</p>}
 
-        <button onClick={handleLogin}>Ingresar</button>
-
+        <button onClick={handleLogin}>Sing in</button>
         <button className="register" onClick={() => navigate("/registro")}>
           Ir a Registro
         </button>
       </div>
-
       <div
         className="right-side"
         style={{ backgroundImage: `url(${tienda2})` }}
