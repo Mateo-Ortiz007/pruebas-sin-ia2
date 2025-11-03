@@ -17,11 +17,12 @@ body {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center left; /* posición final */
   height: 100vh;
-  border-radius: 0;
   width: 100%;
-  background-position: center left;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
