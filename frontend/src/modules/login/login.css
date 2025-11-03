@@ -9,6 +9,7 @@ body {
 
 /* Lado izquierdo: login */
 .login-container {
+  flex: 0 0 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +22,10 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 80%;
+  max-width: 350px;
   display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 
@@ -38,6 +41,8 @@ body {
 /* Inputs */
 .login-box input,
 .login-box select {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -79,13 +84,14 @@ body {
   text-align: center;
 }
 
-/* Lado derecho: espacio para imagen */
+/* Lado derecho: imagen */
 .right-side {
-  flex: 1;
+  flex: 0 0 60%;
   display: flex;
-  max-width: 70%;
-  width: auto;
-  margin: 80px;
+  justify-content: center;
+  align-items: center;
   background-repeat: no-repeat;
-  height: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
