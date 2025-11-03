@@ -41,33 +41,38 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="login">
-      <div className="login-content">
-        <h2>SHOP STORE</h2>
-        <hr className="linea" />
-        <h2>Login</h2>
+    <div className="main-container">
+      <div className="login">
+        <div className="login-content">
+          <h2>SHOP STORE</h2>
+          <hr className="linea" />
+          <h2>Login</h2>
 
-        <label>Email</label>
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={contrasena}
-          onChange={(e) => setContrasena(e.target.value)}
-        />
-        {error && <p className="error">{error}</p>}
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <button onClick={handleLogin}>Sing in</button>
-        <button className="register" onClick={() => navigate("/registro")}>
-          Ir a Registro
-        </button>
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+          />
+
+          {error && <p className="error">{error}</p>}
+
+          <button onClick={handleLogin}>Sign in</button>
+          <button className="register" onClick={() => navigate("/registro")}>
+            Ir a Registro
+          </button>
+        </div>
       </div>
+
       <div
         className="right-side"
         style={{ backgroundImage: `url(${tienda2})` }}
