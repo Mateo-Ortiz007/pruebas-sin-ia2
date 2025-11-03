@@ -8,25 +8,21 @@ body {
 }
 
 /* Lado izquierdo: login */
-.login-container {
-  flex: 0 0 40%;
+.login {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: radial-gradient(circle at center, #a0d8f1, #b6f2b0);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 35%;
 }
 
 /* Caja del login */
-.login-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 350px;
-  display: flex;
+.login-content {
+  padding-top: 150px;
+  background-color: rgb(245, 245, 245);
+  height: 100vh;
+  width: 100%;
   flex-direction: column;
-  gap: 15px;
 }
 
 /* Título del login */

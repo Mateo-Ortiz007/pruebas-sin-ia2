@@ -41,8 +41,8 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
+    <div className="login">
+      <div className="login-content">
         <h2>Iniciar Sesión</h2>
 
         <input
