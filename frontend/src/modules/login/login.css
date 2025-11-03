@@ -16,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-size: auto; /* hace que llene el área */
+
   background-position: center; /* centra la imagen */
   height: 100vh; /* ocupa todo el alto */
   width: 60%;
