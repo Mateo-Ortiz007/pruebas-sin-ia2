@@ -29,6 +29,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(245, 245, 245);
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 /* ======== CONTENIDO DEL LOGIN ======== */
@@ -100,7 +102,8 @@ body {
 .login-content .register {
   font-size: 18px;
   margin-top: 15px;
-  color: #000;
+  color: #fff;
+  background-color: #28a745;
 }
 
 /* ======== LÍNEA SEPARADORA ======== */
