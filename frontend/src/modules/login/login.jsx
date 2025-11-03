@@ -42,62 +42,57 @@ function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <div className="login-container">
-      <div className="left-side">
-        <div className="login-box">
-          <h2>Tienda</h2>
-          <hr className="linea" />
-          <h2>Login</h2>
+    <div className="login">
+      <div className="login-content">
+        <h2>Tienda</h2>
+        <hr className="linea" />
+        <h2>Login</h2>
 
-          <label htmlFor="email">Correo</label>
+        <label htmlFor="email">Correo</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Correo electrónico"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <label htmlFor="password">Contraseña</label>
+        <div className="password-container">
           <input
-            type="email"
-            id="email"
-            placeholder="Correo electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type={mostrarPassword ? "text" : "password"}
+            id="password"
+            placeholder="Contraseña"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
           />
+          <button
+            type="button"
+            className="toggle-btn"
+            onClick={() => setMostrarPassword(!mostrarPassword)}
+          >
+            {mostrarPassword ? "🙈" : "👁️"}
+          </button>
+        </div>
 
-          <label htmlFor="password">Contraseña</label>
-          <div className="password-container">
-            <input
-              type={mostrarPassword ? "text" : "password"}
-              id="password"
-              placeholder="Contraseña"
-              value={contrasena}
-              onChange={(e) => setContrasena(e.target.value)}
-            />
-            <button
-              type="button"
-              className="toggle-btn"
-              onClick={() => setMostrarPassword(!mostrarPassword)}
-            >
-              {mostrarPassword ? "🙈" : "👁️"}
-            </button>
-          </div>
+        <label className="remember-me">
+          <input
+            type="checkbox"
+            checked={recordar}
+            onChange={() => setRecordar(!recordar)}
+          />
+          Remember me
+        </label>
 
-          <label className="remember-me">
-            <input
-              type="checkbox"
-              checked={recordar}
-              onChange={() => setRecordar(!recordar)}
-            />
-            Remember me
-          </label>
+        {error && <p className="error">{error}</p>}
 
-          {error && <p className="error">{error}</p>}
+        <button onClick={handleLogin}>Sign in</button>
 
-          <button onClick={handleLogin}>Sign in</button>
-
-          <div className="register-section">
-            <span>¿You don't have an account?</span>
-            <button
-              className="signup-btn"
-              onClick={() => navigate("/registro")}
-            >
-              Sign up free
-            </button>
-          </div>
+        <div className="register-section">
+          <span>¿You don't have an account?</span>
+          <button className="signup-btn" onClick={() => navigate("/registro")}>
+            Sign up free
+          </button>
         </div>
       </div>
 
