@@ -11,15 +11,17 @@ body {
 
 /* ======== LADO DERECHO (IMAGEN / FONDO) ======== */
 .right-side {
-  flex: 1;
+  flex: 1; /* ocupa todo el espacio restante */
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 40px;
-  border-radius: 10px;
+  background-size: cover; /* hace que llene el área */
+  background-position: center; /* centra la imagen */
+  height: 100vh; /* ocupa todo el alto */
+  width: 100%;
+  margin: 0; /* elimina el espacio que la encogía */
+  border-radius: 0; /* opcional, quita bordes */
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
