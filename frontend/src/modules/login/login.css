@@ -18,8 +18,7 @@ body {
   background-repeat: no-repeat;
   background-position: center; /* centra la imagen */
   height: 100vh; /* ocupa todo el alto */
-  margin: 0; /* elimina el espacio que la encogía */
-  border-radius: 0; /* opcional, quita bordes */
+  width: 65%;
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */

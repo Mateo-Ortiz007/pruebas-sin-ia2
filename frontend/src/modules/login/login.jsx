@@ -70,7 +70,7 @@ function Login({ setIsAuthenticated }) {
       </div>
       <div
         className="right-side"
-        style={{ backgroundImage: `url(${tienda2})`, width: 500 }}
+        style={{ backgroundImage: `url(${tienda2})` }}
       ></div>
     </div>
   );
