@@ -63,10 +63,7 @@ function Login({ setIsAuthenticated }) {
 
         <button onClick={handleLogin}>Ingresar</button>
 
-        <button
-          onClick={() => navigate("/registro")}
-          style={{ marginTop: "10px", backgroundColor: "#28a745" }}
-        >
+        <button className="register" onClick={() => navigate("/registro")}>
           Ir a Registro
         </button>
       </div>

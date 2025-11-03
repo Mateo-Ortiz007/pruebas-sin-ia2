@@ -104,9 +104,9 @@ body {
 }
 
 /* ======== LÍNEA SEPARADORA ======== */
-.linea {
+.login-content .linea {
   height: 2px;
-  background-color: #000;
+  background-color: #28a745;
   width: 100%;
   margin: 20px 0;
   border: none;
