@@ -11,9 +11,9 @@ body {
   flex: 1;
   display: flex;
   max-width: 70%;
+  width: 80%;
   width: auto;
   margin: 80px;
-  background-image: url(asset/tienda2.png);
   background-repeat: no-repeat;
   height: 100%;
 }
