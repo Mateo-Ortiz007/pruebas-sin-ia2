@@ -9,7 +9,6 @@ body {
 
 /* Lado izquierdo: login */
 .login-container {
-  flex: 1; /* ocupa la mitad de la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;

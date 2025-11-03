@@ -69,7 +69,7 @@ function Login({ setIsAuthenticated }) {
         </button>
       </div>
 
-      <div className="right-side">{/* Aquí puedes poner tu imagen */}</div>
+      <div className="right-side"></div>
     </div>
   );
 }
