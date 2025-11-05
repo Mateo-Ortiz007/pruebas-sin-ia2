@@ -77,8 +77,6 @@ function Login({ setIsAuthenticated }) {
         className="right-side"
         style={{ backgroundImage: `url(${tienda2})` }}
       ></div>
-
-      <p>Login creado por Mateo Ortiz</p>
     </div>
   );
 }
