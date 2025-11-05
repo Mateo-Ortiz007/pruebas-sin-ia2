@@ -131,6 +131,6 @@ body {
   width: 100%;
 }
 
-p {
-  opacity: 2;
+.login-content p {
+  opacity: 0.5;
 }
