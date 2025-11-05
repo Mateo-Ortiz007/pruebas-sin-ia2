@@ -67,10 +67,10 @@
   width: 50px;
 }
 .products-container button:hover {
-  background-color: #fff;
+  background-color: #000000;
 }
 .products-container .lapiz:hover {
-  background-color: yellow;
+  background-color: rgb(223, 62, 13);
 }
 /* Lista de productos */
 .products-container ul {
