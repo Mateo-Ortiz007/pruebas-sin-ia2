@@ -24,8 +24,8 @@
   gap: 10px;
 }
 
-.products-containerinput[type="text"],
-.products-containerinput[type="date"],
+.products-container input[type="text"],
+.products-container input[type="date"],
 .products-container input[type="number"],
 .products-container select {
   padding: 8px;
@@ -59,7 +59,7 @@
   gap: 10px; /* espacio entre productos */
 }
 
-.products-containerli {
+.products-container li {
   background: #fff;
   padding: 10px 15px;
   border-radius: 8px;
