@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    await pool.query("DELETE FROM productos_de_la_tienda WHERE id=?"[id]);
+    await pool.query("DELETE FROM productos_de_la_tienda WHERE id=?", [id]);
     res.json({ message: "Producto eliminado correctamente" });
   } catch {
     console.error(err);
