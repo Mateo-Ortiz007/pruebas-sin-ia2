@@ -1,4 +1,4 @@
-.main-product {
+body {
   background-color: coral;
 }
 
@@ -51,6 +51,15 @@
   transition: 0.2s;
 }
 
+.products-container .button-delete {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(223, 62, 13);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
 .products-container button:hover {
   background-color: #4c55c3;
 }
