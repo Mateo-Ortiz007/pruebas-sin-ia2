@@ -51,6 +51,7 @@
   color: white;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 20px;
 }
 
 .products-container .button-delete {
