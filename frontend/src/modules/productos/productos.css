@@ -1,3 +1,7 @@
+.main-product {
+  background-color: coral;
+}
+
 .products-container {
   width: 800px;
   margin: 50px auto;
@@ -32,7 +36,7 @@
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 180px; /* tamaño fijo */
+  width: 300px; /* tamaño fijo */
   box-sizing: border-box;
 }
 
@@ -41,7 +45,7 @@
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
-  background-color: #646cff;
+  background-color: rgb(223, 62, 13);
   color: white;
   cursor: pointer;
   transition: 0.2s;
