@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: radial-gradient(circle, cadetblue, darkcyan);
+  padding: 0;
 }
 
 .app-layout {
@@ -11,6 +11,7 @@ body {
 
 .main-content {
   flex: 1;
-  background-color: #f5f5f5;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
