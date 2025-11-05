@@ -3,11 +3,13 @@ body {
   font-family: sans-serif;
   padding: 0;
   height: 100vh;
+  background-color: coral;
 }
 
 .app-layout {
   display: flex;
   height: 100vh;
+  background-color: coral;
 }
 
 .main-content {
