@@ -51,7 +51,7 @@ function Login({ setIsAuthenticated }) {
           <label>Email</label>
           <input
             type="email"
-            placeholder="Correo electrónico"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -59,7 +59,7 @@ function Login({ setIsAuthenticated }) {
           <label>Password</label>
           <input
             type="password"
-            placeholder="Contraseña"
+            placeholder="Password"
             value={contrasena}
             onChange={(e) => setContrasena(e.target.value)}
           />
