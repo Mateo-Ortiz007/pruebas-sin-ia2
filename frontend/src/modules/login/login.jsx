@@ -46,7 +46,7 @@ function Login({ setIsAuthenticated }) {
         <div className="login-content">
           <h2>SHOP STORE</h2>
           <hr className="linea" />
-          <h2>Login</h2>
+          <h2 className="h2-login">Login</h2>
 
           <label>Email</label>
           <input
