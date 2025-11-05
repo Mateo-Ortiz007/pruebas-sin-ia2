@@ -1,5 +1,6 @@
 .producst-main-container {
   background-color: coral;
+  height: 100vh;
 }
 .products-container {
   width: 800px;
