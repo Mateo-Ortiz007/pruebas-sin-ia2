@@ -4,14 +4,6 @@
   padding: 0;
 }
 
-html,
-body,
-#root {
-  height: 100%;
-  width: 100%;
-  font-family: sans-serif;
-}
-
 .container-main-register {
   display: flex;
   justify-content: center;
