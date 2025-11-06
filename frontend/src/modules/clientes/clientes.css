@@ -1,47 +1,69 @@
-.container {
-  width: 400px;
+body {
+  margin: 0;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+} /* Nombre corregido */
+.clients-main-container {
+  background-color: coral;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-clients {
+  width: 70%;
   margin: 40px auto;
   font-family: Arial, sans-serif;
   background-color: white;
 }
 
-h1 {
+.container-clients h1 {
   text-align: center;
   color: #333;
 }
 
-input {
-  display: block;
-  width: 50%;
-  margin: 8px 0;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
+.container-clients input {
+  width: 800px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid #000;
+  margin: 0; /* quita el margen que lo descentraba */
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
+.container-clients button {
+  padding: 8px 12px;
   border: none;
   border-radius: 6px;
+  background-color: rgb(223, 62, 13);
+  color: white;
   cursor: pointer;
-  font-size: 14px;
+  transition: 0.2s;
+  font-size: 15px;
+  width: 150px;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-ul {
+.container-clients ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
-li {
+.container-clients li {
   background: #f9f9f9;
   margin-bottom: 8px;
   padding: 8px;
@@ -51,14 +73,14 @@ li {
   align-items: center;
 }
 
-li button {
+.container-clients li button {
   margin-left: 5px;
   padding: 5px 8px;
   font-size: 12px;
 }
 
 /* Modal */
-.modal {
+.container-clients .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -70,7 +92,7 @@ li button {
   align-items: center;
 }
 
-.modal-content {
+.container-clients .modal-content {
   background: white;
   padding: 20px;
   border-radius: 10px;

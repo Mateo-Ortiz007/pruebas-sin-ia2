@@ -105,87 +105,91 @@ function Clientes() {
   };
 
   return (
-    <div className="container">
-      <h1>Clientes</h1>
+    <div className="clients-main-container">
+      <div className="container-clients">
+        <h1>Clientes</h1>
 
-      {/* Formulario agregar cliente */}
-      <input
-        type="text"
-        placeholder="Nombre"
-        value={newNombre}
-        onChange={(e) => setNewNombre(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Apellido"
-        value={newApellido}
-        onChange={(e) => setNewApellido(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={newEmail}
-        onChange={(e) => setNewEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Contraseña"
-        value={newContrasena}
-        onChange={(e) => setNewContrasena(e.target.value)}
-      />
-      <button onClick={addCliente}>Agregar Cliente</button>
+        {/* Formulario agregar cliente */}
+        <input
+          type="text"
+          placeholder="Nombre"
+          value={newNombre}
+          onChange={(e) => setNewNombre(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Apellido"
+          value={newApellido}
+          onChange={(e) => setNewApellido(e.target.value)}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          value={newEmail}
+          onChange={(e) => setNewEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={newContrasena}
+          onChange={(e) => setNewContrasena(e.target.value)}
+        />
+        <button onClick={addCliente}>Agregar Cliente</button>
 
-      {/* Lista de clientes */}
-      <ul>
-        {clientes.map((cliente) => (
-          <li key={cliente.id}>
-            {cliente.nombre} {cliente.apellido} - {cliente.email}
-            <button onClick={() => openEditModal(cliente)}>Editar</button>
-            <button onClick={() => confirmDelete(cliente)}>Eliminar</button>
-          </li>
-        ))}
-      </ul>
+        {/* Lista de clientes */}
+        <ul>
+          {clientes.map((cliente) => (
+            <li key={cliente.id}>
+              {cliente.nombre} {cliente.apellido} - {cliente.email}
+              <button onClick={() => openEditModal(cliente)}>Editar</button>
+              <button onClick={() => confirmDelete(cliente)}>Eliminar</button>
+            </li>
+          ))}
+        </ul>
 
-      {/* Modal de edición */}
-      {editModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>Editar Cliente</h2>
-            <input
-              type="text"
-              value={nombreToEdit}
-              onChange={(e) => setNombreToEdit(e.target.value)}
-            />
-            <input
-              type="text"
-              value={apellidoToEdit}
-              onChange={(e) => setApellidoToEdit(e.target.value)}
-            />
-            <input
-              type="email"
-              value={emailToEdit}
-              onChange={(e) => setEmailToEdit(e.target.value)}
-            />
-            <button onClick={saveEdit}>Guardar</button>
-            <button onClick={() => setEditModalOpen(false)}>Cancelar</button>
+        {/* Modal de edición */}
+        {editModalOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2>Editar Cliente</h2>
+              <input
+                type="text"
+                value={nombreToEdit}
+                onChange={(e) => setNombreToEdit(e.target.value)}
+              />
+              <input
+                type="text"
+                value={apellidoToEdit}
+                onChange={(e) => setApellidoToEdit(e.target.value)}
+              />
+              <input
+                type="email"
+                value={emailToEdit}
+                onChange={(e) => setEmailToEdit(e.target.value)}
+              />
+              <button onClick={saveEdit}>Guardar</button>
+              <button onClick={() => setEditModalOpen(false)}>Cancelar</button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Modal de confirmación de eliminación */}
-      {deleteModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>¿Eliminar Cliente?</h2>
-            <p>
-              {clienteToDelete?.nombre} {clienteToDelete?.apellido} -{" "}
-              {clienteToDelete?.email}
-            </p>
-            <button onClick={deleteCliente}>Eliminar</button>
-            <button onClick={() => setDeleteModalOpen(false)}>Cancelar</button>
+        {/* Modal de confirmación de eliminación */}
+        {deleteModalOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2>¿Eliminar Cliente?</h2>
+              <p>
+                {clienteToDelete?.nombre} {clienteToDelete?.apellido} -{" "}
+                {clienteToDelete?.email}
+              </p>
+              <button onClick={deleteCliente}>Eliminar</button>
+              <button onClick={() => setDeleteModalOpen(false)}>
+                Cancelar
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
