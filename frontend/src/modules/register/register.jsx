@@ -121,7 +121,7 @@ function Registro() {
           required
         />
         <button onClick={addUsuario}>Registrarse</button>
-        <hr className="linea" />
+        <hr className="linea-baja" />
       </div>
     </div>
   );
