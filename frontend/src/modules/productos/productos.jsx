@@ -14,7 +14,7 @@ function Productos() {
 
   const [editedModalOpen, setEditedModalOpen] = useState(false);
   const [productosToEdit, setProductosToEdit] = useState(null);
-  const [editednombre, setEditedNombre] = useState("");
+  const [editedNombre, setEditedNombre] = useState("");
   const [editedTipo, setEditedTipo] = useState("");
   const [editedFecha, setEditedFecha] = useState("");
   const [editedPrecio, setEditedPrecio] = useState("");
@@ -55,7 +55,11 @@ function Productos() {
     setProductosToEdit(producto);
     setEditedNombre(producto.nombre);
     setEditedTipo(producto.tipo);
-    setEditedFecha(producto.fecha);
+    // ✅ formatea solo para el input sin alterar la DB
+    const fechaSolo = producto.fecha
+      ? new Date(producto.fecha).toISOString().split("T")[0]
+      : "";
+    setEditedFecha(fechaSolo);
     setEditedPrecio(producto.precio);
     setEditedModalOpen(true);
   };
@@ -67,7 +71,7 @@ function Productos() {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        nombre: editednombre,
+        nombre: editedNombre,
         tipo: editedTipo,
         fecha: editedFecha,
         precio: editedPrecio,
@@ -160,7 +164,7 @@ function Productos() {
               <h2>Editar producto</h2>
               <input
                 type="text"
-                value={editednombre}
+                value={editedNombre}
                 onChange={(e) => setEditedNombre(e.target.value)}
               />
               <input
@@ -213,9 +217,7 @@ function Productos() {
             value={filtrado}
           >
             <option value="all">Todos</option>
-            {[
-              ...new Set(productos.map((p) => p.tipo)), // tipos únicos
-            ].map((tipo) => (
+            {[...new Set(productos.map((p) => p.tipo))].map((tipo) => (
               <option key={tipo} value={tipo}>
                 {tipo}
               </option>
