@@ -74,7 +74,7 @@
 
 /* Modal box */
 .sidebar .modal {
-  background: #fff;
+  background: #000000;
   padding: 25px 30px;
   border-radius: 10px;
   text-align: center;
@@ -119,7 +119,7 @@
   padding: 5px 15px;
 }
 
-.sidebar.cancel {
+.sidebar .cancel {
   background-color: #95a5a6;
   height: 40px;
 }
