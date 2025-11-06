@@ -58,7 +58,7 @@
 }
 
 /* Modal overlay */
-.modal-overlay {
+.sidebar .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -73,7 +73,7 @@
 }
 
 /* Modal box */
-.modal {
+.sidebar .modal {
   background: #fff;
   padding: 25px 30px;
   border-radius: 10px;
@@ -88,7 +88,7 @@
 }
 
 /* Texto del modal */
-.modal h3 {
+.sidebar .modal h3 {
   margin: 0;
   color: #f5f5f5;
   font-weight: 600;
@@ -97,14 +97,14 @@
 }
 
 /* Botones del modal */
-.modal-buttons {
+.sidebar .modal-buttons {
   display: flex;
   justify-content: center;
   gap: 5px; /* espacio entre botones */
   width: 100%;
 }
 
-.modal-buttons button {
+.sidebar .modal-buttons button {
   flex: 1; /* mismo ancho para los dos */
   border: none;
   border-radius: 5px;
@@ -113,13 +113,13 @@
   color: white;
 }
 
-.confirm {
+.sidebar .confirm {
   background-color: #e74c3c;
   height: 35px;
   padding: 5px 15px;
 }
 
-.cancel {
+.sidebar.cancel {
   background-color: #95a5a6;
   height: 40px;
 }
