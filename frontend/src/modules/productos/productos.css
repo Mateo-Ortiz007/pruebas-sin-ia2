@@ -1,21 +1,34 @@
-.producst-main-container {
+body {
+  margin: 0;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Nombre corregido */
+.products-main-container {
   background-color: coral;
   height: 100vh;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .products-container {
   width: 800px;
   padding: 40px;
-  margin: 50px 0 50px 50px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* separa secciones verticalmente */
+  gap: 20px;
   border: 2px solid #000;
+  margin: 0; /* quita el margen que lo descentraba */
 }
 
 /* Título */
