@@ -3,13 +3,11 @@ body {
   font-family: sans-serif;
   padding: 0;
   height: 100vh;
-  background-color: coral;
 }
 
 .app-layout {
   display: flex;
   height: 100vh;
-  background-color: coral;
 }
 
 .main-content {
@@ -17,6 +15,12 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background-color: coral;
+
   height: 100vh;
+}
+
+.label-products {
+  font-size: 15px;
+  color: #000;
+  display: block;
 }

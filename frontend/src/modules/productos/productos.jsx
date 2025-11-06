@@ -115,6 +115,8 @@ function Productos() {
       <div className="products-container">
         <h1>Productos</h1>
 
+        <label className="label-products">Producto</label>
+
         <input
           type="text"
           value={newNombre}
@@ -122,12 +124,18 @@ function Productos() {
           onChange={(e) => setNewNombre(e.target.value)}
         />
 
+        <label className="label-products">Tipo</label>
+
         <input
           type="text"
           value={newtipo}
           placeholder="Ingrese el tipo del nuevo producto"
           onChange={(e) => setNewTipo(e.target.value)}
         />
+
+        <label className="label-products">
+          Ingrese la fecha de caducidad del producto
+        </label>
 
         <input
           type="date"
