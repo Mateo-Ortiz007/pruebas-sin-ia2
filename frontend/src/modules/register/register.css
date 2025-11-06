@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html,
@@ -25,7 +24,7 @@ body,
 /* Caja del formulario */
 .container-register {
   background-color: #fff;
-  padding: 24px; /* reducido de 30px un 20% */
+  padding: 20px; /* reducido de 30px un 20% */
   border-radius: 15px; /* ligeramente más pequeño */
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   width: 600px;
@@ -54,7 +53,7 @@ body,
   font-size: 12px; /* reducido un 20% desde 14px */
   outline: none;
   transition: border-color 0.2s;
-  width: 80%;
+  width: 90%;
 }
 
 .container-register input:focus,
