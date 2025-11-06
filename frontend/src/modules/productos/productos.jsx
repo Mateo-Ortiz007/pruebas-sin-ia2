@@ -75,8 +75,25 @@ function Productos() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setProductos(productos.map((p) => (p.id === data.id ? data : p)));
-        setEditedModalOpen(false);
+        // Verifica si la API devolvió correctamente el producto actualizado
+        if (data && !data.error) {
+          setProductos((prev) =>
+            prev.map((p) =>
+              p.id === productosToEdit.id
+                ? {
+                    ...p,
+                    nombre: editednombre,
+                    tipo: editedTipo,
+                    fecha: editedFecha,
+                    precio: editedPrecio,
+                  }
+                : p
+            )
+          );
+          setEditedModalOpen(false);
+        } else {
+          console.error("Error al actualizar producto:", data.error);
+        }
       })
       .catch((err) => console.error("Error al actualizar producto:", err));
   };
