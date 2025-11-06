@@ -144,7 +144,7 @@ function Productos() {
           onChange={(e) => setNewFecha(e.target.value)}
         />
 
-        <label className="labe-products">Precio</label>
+        <label className="label-products">Precio</label>
         <input
           type="number"
           value={newprecio}
