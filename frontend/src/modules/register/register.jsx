@@ -66,21 +66,21 @@ function Registro() {
         <div className="linea-container">
           <hr className="linea" />
         </div>
-        <label className="input-label">Nombre</label>
+        <label className="input-label">Name</label>
         <input
           type="text"
           value={newNombreDeUsuario}
           onChange={(e) => setNewNombreDeUsuario(e.target.value)}
           required
         />
-        <label className="input-label">Apellido</label>
+        <label className="input-label">Last-name</label>
         <input
           type="text"
           value={newApellidoDeUsuario}
           onChange={(e) => setNewApellidoDeUsuario(e.target.value)}
           required
         />
-        <label className="input-label">Cedula</label>
+        <label className="input-label">Document</label>
         <input
           type="number"
           maxLength="10"
@@ -88,7 +88,7 @@ function Registro() {
           onChange={(e) => setNewCedulaDelUsuario(e.target.value)}
           required
         />
-        <label className="input-label">Telefono</label>
+        <label className="input-label">Phone</label>
         <input
           type="number"
           maxLength="10"
@@ -96,32 +96,31 @@ function Registro() {
           onChange={(e) => setNewTelefonoDelUsuario(e.target.value)}
           required
         />
-        <label className="input-label">Genero</label>
+        <label className="input-label">Gender</label>
         <select
           value={newGeneroDelUsuario}
           onChange={(e) => setNewGeneroDelUsuario(e.target.value)}
         >
           <option value="">Selecciona tu género</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Femenino">Femenino</option>
-          <option value="Otro">Otro</option>
+          <option value="Masculino">Masculine</option>
+          <option value="Femenino">Female</option>
+          <option value="Otro">Other</option>
         </select>
-        <label className="input-label">Correo</label>
+        <label className="input-label">Email</label>
         <input
           type="email"
           value={newemail}
           onChange={(e) => setNewEmail(e.target.value)}
           required
         />
-        <label className="input-label">Contraseña</label>
+        <label className="input-label">Password</label>
         <input
           type="password"
           value={newcontrasena}
           onChange={(e) => setNewContrasena(e.target.value)}
           required
         />
-        <button onClick={addUsuario}>Registrarse</button>
-        <hr className="linea-baja" />
+        <button onClick={addUsuario}>Sing up</button>
       </div>
     </div>
   );
