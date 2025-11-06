@@ -160,6 +160,8 @@ body {
   cursor: pointer;
 }
 
-.products-container label {
-  color: red;
+.label-products {
+  font-size: 15px;
+  color: #000;
+  display: block;
 }
