@@ -5,9 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
-
-/* Nombre corregido */
+} /* Nombre corregido */
 .products-main-container {
   background-color: coral;
   height: 100vh;
