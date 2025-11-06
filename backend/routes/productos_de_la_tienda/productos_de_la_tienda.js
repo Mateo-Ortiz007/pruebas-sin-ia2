@@ -39,6 +39,34 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { nombre, tipo, fecha, precio } = req.body;
+
+    const [result] = await pool.query(
+      "UPDATE productos_de_la_tienda SET nombre = ?, tipo = ?, fecha = ?, precio = ? WHERE id = ?",
+      [nombre, tipo, fecha, precio, id]
+    );
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "Producto no encontrado" });
+    }
+
+    res.json({
+      message: "Producto actualizado correctamente",
+      id,
+      nombre,
+      tipo,
+      fecha,
+      precio,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Error al actualizar el producto" });
+  }
+});
+
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
