@@ -18,7 +18,7 @@ body,
   align-items: center;
   height: 100vh;
   width: 100%; /* reducido un 20% desde 1000px */
-  background-color: #fff;
+  background-color: coral;
 }
 
 /* Caja del formulario */
