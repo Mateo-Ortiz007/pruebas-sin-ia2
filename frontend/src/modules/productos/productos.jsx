@@ -134,7 +134,7 @@ function Productos() {
         />
 
         <label className="label-products">
-          Ingrese la fecha de caducidad del producto
+          fecha de caducidad del producto
         </label>
 
         <input
@@ -144,6 +144,7 @@ function Productos() {
           onChange={(e) => setNewFecha(e.target.value)}
         />
 
+        <label className="labe-products">Precio</label>
         <input
           type="number"
           value={newprecio}
