@@ -109,25 +109,28 @@ function Clientes() {
       <div className="container-clients">
         <h1>Clientes</h1>
 
-        {/* Formulario agregar cliente */}
+        <label className="label-clients"> Name</label>
         <input
           type="text"
           placeholder="Nombre"
           value={newNombre}
           onChange={(e) => setNewNombre(e.target.value)}
         />
+        <label className="label-clients"> Last-Name</label>
         <input
           type="text"
           placeholder="Apellido"
           value={newApellido}
           onChange={(e) => setNewApellido(e.target.value)}
         />
+        <label className="label-clients"> Email</label>
         <input
           type="email"
           placeholder="Email"
           value={newEmail}
           onChange={(e) => setNewEmail(e.target.value)}
         />
+        <label className="label-clients"> Password</label>
         <input
           type="password"
           placeholder="Contraseña"

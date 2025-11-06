@@ -30,7 +30,7 @@ body {
 
 .container-clients input {
   display: block;
-  width: 50%;
+  width: 80%;
   margin: 8px 0;
   padding: 8px;
   border-radius: 6px;
@@ -38,7 +38,7 @@ body {
   font-size: 14px;
 }
 
-.container-clientsbutton {
+.container-clients button {
   margin-top: 10px;
   padding: 10px 15px;
   background-color: #007bff;
@@ -93,4 +93,10 @@ body {
   padding: 20px;
   border-radius: 10px;
   width: 300px;
+}
+
+.label-clients {
+  font-size: 15px;
+  color: #000;
+  display: block;
 }
