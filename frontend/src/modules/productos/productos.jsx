@@ -14,7 +14,7 @@ function Productos() {
 
   const [editedModalOpen, setEditedModalOpen] = useState(false);
   const [productosToEdit, setProductosToEdit] = useState(null);
-  const [editedNombre, setEditedNombre] = useState("");
+  const [editednombre, setEditedNombre] = useState("");
   const [editedTipo, setEditedTipo] = useState("");
   const [editedFecha, setEditedFecha] = useState("");
   const [editedPrecio, setEditedPrecio] = useState("");
@@ -67,7 +67,7 @@ function Productos() {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        nombre: editedNombre,
+        nombre: editednombre,
         tipo: editedTipo,
         fecha: editedFecha,
         precio: editedPrecio,
@@ -75,25 +75,8 @@ function Productos() {
     })
       .then((res) => res.json())
       .then((data) => {
-        // Verifica si la API devolvió correctamente el producto actualizado
-        if (data && !data.error) {
-          setProductos((prev) =>
-            prev.map((p) =>
-              p.id === productosToEdit.id
-                ? {
-                    ...p,
-                    nombre: editedNombre,
-                    tipo: editedTipo,
-                    fecha: editedFecha,
-                    precio: editedPrecio,
-                  }
-                : p
-            )
-          );
-          setEditedModalOpen(false);
-        } else {
-          console.error("Error al actualizar producto:", data.error);
-        }
+        setProductos(productos.map((p) => (p.id === data.id ? data : p)));
+        setEditedModalOpen(false);
       })
       .catch((err) => console.error("Error al actualizar producto:", err));
   };
@@ -177,7 +160,7 @@ function Productos() {
               <h2>Editar producto</h2>
               <input
                 type="text"
-                value={editedNombre}
+                value={editednombre}
                 onChange={(e) => setEditedNombre(e.target.value)}
               />
               <input
