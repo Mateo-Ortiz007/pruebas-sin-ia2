@@ -38,15 +38,16 @@ router.post("/", async (req, res) => {
 });
 
 // PUT /proveedores/:id
+// PUT /proveedores/:id
 router.put("/:id", async (req, res) => {
   const { id } = req.params;
-  const { marca, tipo_de_producto, empresa } = req.body;
+  const { marca, tipo_de_productos, empresa } = req.body; // ← corregido
   try {
     await pool.query(
       "UPDATE proveedores SET marca=?, tipo_de_productos=?, empresa=? WHERE id=?",
-      [marca, tipo_de_producto, empresa, id]
+      [marca, tipo_de_productos, empresa, id] // ← corregido
     );
-    res.json({ id, marca, tipo_de_producto, empresa });
+    res.json({ id, marca, tipo_de_productos, empresa });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Error al actualizar proveedor" });
