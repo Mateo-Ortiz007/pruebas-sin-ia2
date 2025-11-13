@@ -121,7 +121,8 @@
 
 .sidebar .cancel {
   background-color: #95a5a6;
-  height: 40px;
+  height: 35px;
+  padding: 5px 15px;
 }
 
 /* Animaciones */
