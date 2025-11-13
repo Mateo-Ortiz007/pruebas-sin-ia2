@@ -104,18 +104,21 @@ function Proveedores() {
       <h1>Suppliers</h1>
 
       {/* Formulario agregar proveedor */}
+      <label className="Label-inputs">Brand</label>
       <input
         type="text"
         placeholder="Brand"
         value={newMarca}
         onChange={(e) => setNewMarca(e.target.value)}
       />
+      <label className="Label-inputs">Product Type</label>
       <input
         type="text"
         placeholder="Product type"
         value={newTipoDeProductos}
         onChange={(e) => setNewTipoDeProductos(e.target.value)}
       />
+      <label className="Label-inputs">Company</label>
       <input
         type="text"
         placeholder="Company"
