@@ -5,19 +5,23 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-} /* Nombre corregido */
+}
+
+/* Contenedor principal */
 .products-main-container {
   background-color: coral;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Caja de contenido */
 .products-container {
-  width: 800px;
-  padding: 40px;
+  width: 90%;
+  max-width: 800px;
+  padding: 30px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -26,7 +30,7 @@ body {
   flex-direction: column;
   gap: 20px;
   border: 2px solid #000;
-  margin: 0; /* quita el margen que lo descentraba */
+  margin: 0 auto;
 }
 
 /* Título */
@@ -35,13 +39,14 @@ body {
   color: #333;
 }
 
-/* Formulario de inputs */
+/* Formulario */
 .products-container .form-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
+/* Inputs */
 .products-container input[type="text"],
 .products-container input[type="date"],
 .products-container input[type="number"],
@@ -49,13 +54,13 @@ body {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 600px; /* tamaño fijo */
+  width: 100%; /* 🔥 cambia fijo por flexible */
   box-sizing: border-box;
 }
 
 /* Botones */
 .products-container button {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: none;
   border-radius: 6px;
   background-color: rgb(223, 62, 13);
@@ -67,29 +72,27 @@ body {
 }
 
 .products-container .button-delete {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 6px;
   background-color: rgb(248, 248, 248);
-  color: white;
-  cursor: pointer;
-  transition: 0.2s;
-  font-size: 10px;
-  width: 50px;
+  color: #000;
+  font-size: 12px;
+  width: 60px;
 }
+
 .products-container button:hover {
   background-color: #000000;
 }
+
 .products-container .lapiz:hover {
   background-color: rgb(223, 62, 13);
 }
-/* Lista de productos */
+
+/* Lista */
 .products-container ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* espacio entre productos */
+  gap: 10px;
 }
 
 .products-container li {
@@ -102,16 +105,17 @@ body {
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Botón lápiz */
+/* Lápiz */
 .products-container .lapiz {
   background: transparent;
   color: #333;
   font-size: 16px;
   cursor: pointer;
   border: none;
-  width: 50px;
+  width: 40px;
 }
 
 /* Modal */
@@ -132,17 +136,12 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  width: 400px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.products-container .modal-content h2 {
-  margin: 0;
-  color: #444;
 }
 
 .products-container .modal-content input {
@@ -153,15 +152,36 @@ body {
   box-sizing: border-box;
 }
 
-.products-container .modal-content button {
-  padding: 8px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
+/* Etiquetas */
 .label-products {
   font-size: 15px;
   color: #000;
   display: block;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .products-container {
+    padding: 20px;
+  }
+
+  .products-container button {
+    width: 100%; /* botones apilan */
+  }
+
+  .products-container li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .products-container {
+    border: none;
+    box-shadow: none;
+  }
 }
