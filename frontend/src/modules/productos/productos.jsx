@@ -228,7 +228,8 @@ function Productos() {
             <li key={producto.id}>
               {producto.nombre}{" "}
               <small style={{ color: "#888", marginLeft: "10px" }}>
-                Fecha de vencimiento: {producto.fecha}
+                Fecha de vencimiento:{" "}
+                {new Date(producto.fecha).toLocaleDateString("es-ES")}
               </small>
               <small style={{ color: "#888", marginLeft: "10px" }}>
                 precio:{producto.precio}
