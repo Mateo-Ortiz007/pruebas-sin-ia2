@@ -120,7 +120,7 @@
 
 label {
   margin-left: 5px;
-  color: red;
+  color: rgb(0, 0, 0);
   display: block;
 }
 
@@ -150,10 +150,4 @@ label {
   .container-proveedores h1 {
     font-size: 1.3rem;
   }
-}
-
-.label-inputs {
-  display: block;
-  font-size: 15px;
-  color: #000;
 }

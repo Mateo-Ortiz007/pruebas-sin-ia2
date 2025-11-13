@@ -86,6 +86,7 @@ body {
   align-items: center;
   flex-wrap: wrap; /* 🔥 permite que los botones bajen si no hay espacio */
   gap: 10px;
+  border: 2px solid cadetblue;
 }
 
 /* Botones dentro de la lista */

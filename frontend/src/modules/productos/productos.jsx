@@ -113,9 +113,9 @@ function Productos() {
   return (
     <div className="products-main-container ">
       <div className="products-container">
-        <h1>Productos</h1>
+        <h1>Products</h1>
 
-        <label className="label-products">Producto</label>
+        <label className="label-products">Product</label>
 
         <input
           type="text"
@@ -124,7 +124,7 @@ function Productos() {
           onChange={(e) => setNewNombre(e.target.value)}
         />
 
-        <label className="label-products">Tipo</label>
+        <label className="label-products">Type</label>
 
         <input
           type="text"
@@ -133,9 +133,7 @@ function Productos() {
           onChange={(e) => setNewTipo(e.target.value)}
         />
 
-        <label className="label-products">
-          fecha de caducidad del producto
-        </label>
+        <label className="label-products">expiration date</label>
 
         <input
           type="date"
@@ -144,7 +142,7 @@ function Productos() {
           onChange={(e) => setNewFecha(e.target.value)}
         />
 
-        <label className="label-products">Precio</label>
+        <label className="label-products">Price</label>
         <input
           type="number"
           value={newprecio}
@@ -152,12 +150,12 @@ function Productos() {
           onChange={(e) => setNewPrecio(e.target.value)}
         />
 
-        <button onClick={addProduct}>Agregar</button>
+        <button onClick={addProduct}>add</button>
 
         {editedModalOpen && (
           <div className="modal">
             <div className="modal-content">
-              <h2>Editar producto</h2>
+              <h2>Edit Product</h2>
               <input
                 type="text"
                 value={editednombre}
@@ -189,12 +187,10 @@ function Productos() {
         {deleteModalOpen && (
           <div className="modal">
             <div className="modal-content">
-              <h2>¿Eliminar producto?</h2>
-              <p>¿Estás seguro de eliminar "{productToDelete?.nombre}"?</p>
-              <button onClick={deleteProduct}>Sí, eliminar</button>
-              <button onClick={() => setDeleteModalOpen(false)}>
-                Cancelar
-              </button>
+              <h2>¿Delete Product?</h2>
+              <p>¿Are you sure to delete "{productToDelete?.nombre}"?</p>
+              <button onClick={deleteProduct}>Delete</button>
+              <button onClick={() => setDeleteModalOpen(false)}>Cancel</button>
             </div>
           </div>
         )}
@@ -212,7 +208,7 @@ function Productos() {
             onChange={(e) => setFiltrado(e.target.value)}
             value={filtrado}
           >
-            <option value="all">Todos</option>
+            <option value="all">All</option>
             {[
               ...new Set(productos.map((p) => p.tipo)), // tipos únicos
             ].map((tipo) => (
@@ -228,17 +224,13 @@ function Productos() {
             <li key={producto.id}>
               {producto.nombre}{" "}
               <small style={{ color: "#888", marginLeft: "10px" }}>
-                Fecha de vencimiento:{" "}
+                expiration date:{" "}
                 {new Date(producto.fecha).toLocaleDateString("es-ES")}
               </small>
               <small style={{ color: "#888", marginLeft: "10px" }}>
-                precio:{producto.precio}
+                price:{producto.precio}
               </small>
-              <button
-                className="lapiz"
-                onClick={() => openEditModal(producto)}
-                style={{ marginLeft: "10px" }}
-              >
+              <button className="lapiz" onClick={() => openEditModal(producto)}>
                 ✏️
               </button>
               <button
