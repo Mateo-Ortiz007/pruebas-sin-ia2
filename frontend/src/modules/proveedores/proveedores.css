@@ -1,5 +1,6 @@
 .container-proveedores {
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
   margin: 50px auto;
   padding: 40px;
   background: #fff;
@@ -7,6 +8,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   height: auto;
+  box-sizing: border-box;
 }
 
 /* Título */
@@ -22,15 +24,16 @@
 .container-proveedores input[type="number"],
 .container-proveedores select {
   padding: 8px;
-  margin: 5px;
+  margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: calc(100% - 20px);
+  width: 100%; /* 🔥 antes calc(100% - 20px) */
+  box-sizing: border-box;
 }
 
 .container-proveedores button {
-  margin: 5px;
-  padding: 8px 12px;
+  margin: 8px 0;
+  padding: 10px 15px;
   border: none;
   border-radius: 6px;
   background-color: #646cff;
@@ -47,17 +50,22 @@
 .container-proveedores ul {
   list-style: none;
   padding: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .container-proveedores li {
   background: #fff;
-  margin: 8px 0;
   padding: 10px 12px;
   border-radius: 8px;
   border: 2px solid cadetblue;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* 🔥 permite que se acomoden los botones */
+  gap: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
@@ -67,6 +75,8 @@
   background: transparent;
   color: #333;
   font-size: 16px;
+  cursor: pointer;
+  border: none;
 }
 
 /* Modal */
@@ -80,15 +90,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 .modal-content-proveedores {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  width: 400px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
 
 .modal-content-proveedores h2 {
@@ -99,6 +111,7 @@
 .modal-content-proveedores input {
   margin: 8px 0;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .modal-content-proveedores button {
@@ -106,6 +119,35 @@
 }
 
 label {
-  margin-left: 20px;
+  margin-left: 5px;
   color: red;
+  display: block;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .container-proveedores {
+    padding: 20px;
+  }
+
+  .container-proveedores button {
+    width: 100%; /* apila los botones */
+  }
+
+  .container-proveedores li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-proveedores {
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  .container-proveedores h1 {
+    font-size: 1.3rem;
+  }
 }
