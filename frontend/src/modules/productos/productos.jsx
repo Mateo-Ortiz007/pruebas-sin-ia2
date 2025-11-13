@@ -228,7 +228,7 @@ function Productos() {
                 {new Date(producto.fecha).toLocaleDateString("es-ES")}
               </small>
               <small style={{ color: "#888", marginLeft: "10px" }}>
-                price:{producto.precio}
+                price:{producto.precio} $
               </small>
               <button className="lapiz" onClick={() => openEditModal(producto)}>
                 ✏️
