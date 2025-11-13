@@ -33,7 +33,7 @@ function Proveedores() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         marca: newMarca,
-        tipo_de_productos: newTipoDeProductos,
+        tipo_de_producto: newTipoDeProducto,
         empresa: newEmpresa,
       }),
     })
@@ -49,7 +49,7 @@ function Proveedores() {
   const openEditModal = (proveedor) => {
     setProveedoresToEdit(proveedor);
     setMarcaToEdit(proveedor.marca);
-    setTipoDeProductosToEdit(proveedor.tipo_de_productos);
+    setTipoDeProductosToEdit(proveedor.tipo_de_producto);
     setEmpresaToEdit(proveedor.empresa);
     setEditedModalOpen(true);
   };
@@ -62,7 +62,7 @@ function Proveedores() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         marca: marcaToEdit,
-        tipo_de_productos: tipodeproductosToEdit,
+        tipo_de_producto: tipodeproductosToEdit,
         empresa: empresaToEdit,
       }),
     })
@@ -129,7 +129,7 @@ function Proveedores() {
       <ul>
         {proveedores.map((prov) => (
           <li key={prov.id}>
-            {prov.marca} - {prov.tipo_de_productos} - {prov.empresa}
+            {prov.marca} - {prov.tipo_de_producto} - {prov.empresa}
             <button onClick={() => openEditModal(prov)}>Editar</button>
             <button onClick={() => confirmDeleteProvider(prov)}>
               Eliminar
@@ -170,9 +170,8 @@ function Proveedores() {
           <div className="modal-content-proveedores">
             <h2>¿Eliminar proveedor?</h2>
             <p>
-              {proveedortoDelete?.marca} -{" "}
-              {proveedortoDelete?.tipo_de_productos} -{" "}
-              {proveedortoDelete?.empresa}
+              {proveedortoDelete?.marca} - {proveedortoDelete?.tipo_de_producto}{" "}
+              - {proveedortoDelete?.empresa}
             </p>
             <button onClick={deleteProvider}>Eliminar</button>
             <button onClick={() => setDeleteModalOpen(false)}>Cancelar</button>
