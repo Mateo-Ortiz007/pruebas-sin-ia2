@@ -42,7 +42,7 @@ function Proveedores() {
       .catch((err) => console.error("Error al agregar el proveedor", err));
 
     setNewMarca("");
-    setNewTipoDeProducto("");
+    setNewTipoDeProductos("");
     setNewEmpresa("");
   };
 
@@ -62,13 +62,12 @@ function Proveedores() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         marca: marcaToEdit,
-        tipo_de_productos: tipodeproductoToEdit,
+        tipo_de_productos: tipodeproductosToEdit,
         empresa: empresaToEdit,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
-        // Actualizar el estado local
         setProveedor(
           proveedores.map((pr) => (pr.id === proveedoresToEdit.id ? data : pr))
         );
