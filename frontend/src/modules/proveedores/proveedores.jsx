@@ -100,82 +100,87 @@ function Proveedores() {
       .catch((err) => console.error("Error al eliminar el proveedor", err));
   };
 
-  <div className="container-proveedores">
-    <h1>Proveedores</h1>
+  return (
+    <div className="container-proveedores">
+      <h1>Proveedores</h1>
 
-    {/* Formulario agregar proveedor */}
-    <input
-      type="text"
-      placeholder="Marca"
-      value={newMarca}
-      onChange={(e) => setNewMarca(e.target.value)}
-    />
-    <input
-      type="text"
-      placeholder="Tipo de producto"
-      value={newTipoDeProductos}
-      onChange={(e) => setNewTipoDeProductos(e.target.value)}
-    />
-    <input
-      type="text"
-      placeholder="Empresa"
-      value={newEmpresa}
-      onChange={(e) => setNewEmpresa(e.target.value)}
-    />
-    <button onClick={addProvider}>Agregar</button>
+      {/* Formulario agregar proveedor */}
+      <input
+        type="text"
+        placeholder="Marca"
+        value={newMarca}
+        onChange={(e) => setNewMarca(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Tipo de producto"
+        value={newTipoDeProductos}
+        onChange={(e) => setNewTipoDeProductos(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Empresa"
+        value={newEmpresa}
+        onChange={(e) => setNewEmpresa(e.target.value)}
+      />
+      <button onClick={addProvider}>Agregar</button>
 
-    {/* Lista de proveedores */}
-    <ul>
-      {proveedores.map((prov) => (
-        <li key={prov.id}>
-          {prov.marca} - {prov.tipo_de_productos} - {prov.empresa}
-          <button onClick={() => openEditModal(prov)}>Editar</button>
-          <button onClick={() => confirmDeleteProvider(prov)}>Eliminar</button>
-        </li>
-      ))}
-    </ul>
+      {/* Lista de proveedores */}
+      <ul>
+        {proveedores.map((prov) => (
+          <li key={prov.id}>
+            {prov.marca} - {prov.tipo_de_productos} - {prov.empresa}
+            <button onClick={() => openEditModal(prov)}>Editar</button>
+            <button onClick={() => confirmDeleteProvider(prov)}>
+              Eliminar
+            </button>
+          </li>
+        ))}
+      </ul>
 
-    {/* Modal de edición */}
-    {editedModalOpen && (
-      <div className="modal-proveedores">
-        <div className="modal-content-proveedores">
-          <h2>Editar proveedor</h2>
-          <input
-            type="text"
-            value={marcaToEdit}
-            onChange={(e) => setMarcaToEdit(e.target.value)}
-          />
-          <input
-            type="text"
-            value={tipodeproductosToEdit}
-            onChange={(e) => setTipoDeProductosToEdit(e.target.value)}
-          />
-          <input
-            type="text"
-            value={empresaToEdit}
-            onChange={(e) => setEmpresaToEdit(e.target.value)}
-          />
-          <button onClick={saveEdit}>Guardar</button>
-          <button onClick={() => setEditedModalOpen(false)}>Cancelar</button>
+      {/* Modal de edición */}
+      {editedModalOpen && (
+        <div className="modal-proveedores">
+          <div className="modal-content-proveedores">
+            <h2>Editar proveedor</h2>
+            <input
+              type="text"
+              value={marcaToEdit}
+              onChange={(e) => setMarcaToEdit(e.target.value)}
+            />
+            <input
+              type="text"
+              value={tipodeproductosToEdit}
+              onChange={(e) => setTipoDeProductosToEdit(e.target.value)}
+            />
+            <input
+              type="text"
+              value={empresaToEdit}
+              onChange={(e) => setEmpresaToEdit(e.target.value)}
+            />
+            <button onClick={saveEdit}>Guardar</button>
+            <button onClick={() => setEditedModalOpen(false)}>Cancelar</button>
+          </div>
         </div>
-      </div>
-    )}
+      )}
 
-    {/* Modal de confirmación de eliminación */}
-    {deleteModalOpen && (
-      <div className="modal-proveedores">
-        <div className="modal-content-proveedores">
-          <h2>¿Eliminar proveedor?</h2>
-          <p>
-            {proveedortoDelete?.marca} - {proveedortoDelete?.tipo_de_productos}{" "}
-            - {proveedortoDelete?.empresa}
-          </p>
-          <button onClick={deleteProvider}>Eliminar</button>
-          <button onClick={() => setDeleteModalOpen(false)}>Cancelar</button>
+      {/* Modal de confirmación de eliminación */}
+      {deleteModalOpen && (
+        <div className="modal-proveedores">
+          <div className="modal-content-proveedores">
+            <h2>¿Eliminar proveedor?</h2>
+            <p>
+              {proveedortoDelete?.marca} -{" "}
+              {proveedortoDelete?.tipo_de_productos} -{" "}
+              {proveedortoDelete?.empresa}
+            </p>
+            <button onClick={deleteProvider}>Eliminar</button>
+            <button onClick={() => setDeleteModalOpen(false)}>Cancelar</button>
+          </div>
         </div>
-      </div>
-    )}
-  </div>;
+      )}
+    </div>
+  );
 }
 
 export default Proveedores;
