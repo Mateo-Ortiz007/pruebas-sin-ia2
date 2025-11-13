@@ -5,39 +5,51 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-} /* Nombre corregido */
+}
+
+/* Contenedor principal */
 .clients-main-container {
   background-color: coral;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Caja interna */
 .container-clients {
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
   margin: 40px auto;
   font-family: Arial, sans-serif;
   background-color: white;
-  height: 70vh;
+  min-height: 70vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
 }
 
+/* Título */
 .container-clients h1 {
   text-align: center;
   color: #333;
 }
 
+/* Inputs */
 .container-clients input {
   display: block;
-  width: 80%;
+  width: 100%; /* 🔥 antes 80% */
   margin: 8px 0;
-  padding: 8px;
+  padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
+/* Botones principales */
 .container-clients button {
   margin-top: 10px;
   padding: 10px 15px;
@@ -47,31 +59,39 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
+  transition: 0.2s;
 }
 
 .container-clients button:hover {
   background-color: #0056b3;
 }
 
+/* Lista de clientes */
 .container-clients ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+/* Cada ítem */
 .container-clients li {
   background: #f9f9f9;
-  margin-bottom: 8px;
-  padding: 8px;
+  padding: 10px 12px;
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* 🔥 permite que los botones bajen si no hay espacio */
+  gap: 10px;
 }
 
+/* Botones dentro de la lista */
 .container-clients li button {
   margin-left: 5px;
-  padding: 5px 8px;
+  padding: 6px 10px;
   font-size: 12px;
 }
 
@@ -86,17 +106,49 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .container-clients .modal-content {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
+  box-sizing: border-box;
 }
 
+/* Etiquetas */
 .label-clients {
   font-size: 15px;
   color: #000;
   display: block;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .container-clients {
+    padding: 20px;
+  }
+
+  .container-clients button {
+    width: 100%; /* botones apilados */
+  }
+
+  .container-clients li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-clients {
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  .container-clients h1 {
+    font-size: 1.3rem;
+  }
 }
