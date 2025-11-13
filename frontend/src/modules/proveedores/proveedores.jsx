@@ -6,11 +6,11 @@ function Proveedores() {
 
   const [proveedores, setProveedor] = useState([]);
   const [newMarca, setNewMarca] = useState("");
-  const [newTipoDeProducto, setNewTipoDeProducto] = useState("");
+  const [newTipoDeProductos, setNewTipoDeProductos] = useState("");
   const [newEmpresa, setNewEmpresa] = useState("");
 
   const [marcaToEdit, setMarcaToEdit] = useState("");
-  const [tipodeproductoToEdit, setTipoDeProductoToEdit] = useState("");
+  const [tipodeproductosToEdit, setTipoDeProductosToEdit] = useState("");
   const [empresaToEdit, setEmpresaToEdit] = useState("");
 
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
@@ -26,14 +26,14 @@ function Proveedores() {
   }, []);
 
   const addProvider = () => {
-    if (!newMarca || !newTipoDeProducto || !newEmpresa) return;
+    if (!newMarca || !newTipoDeProductos || !newEmpresa) return;
 
     fetch(`${API_URL}/proveedores`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         marca: newMarca,
-        tipo_de_productos: newTipoDeProducto,
+        tipo_de_productos: newTipoDeProductos,
         empresa: newEmpresa,
       }),
     })
@@ -49,7 +49,7 @@ function Proveedores() {
   const openEditModal = (proveedor) => {
     setProveedoresToEdit(proveedor);
     setMarcaToEdit(proveedor.marca);
-    setTipoDeProductoToEdit(proveedor.tipo_de_productos);
+    setTipoDeProductosToEdit(proveedor.tipo_de_productos);
     setEmpresaToEdit(proveedor.empresa);
     setEditedModalOpen(true);
   };
@@ -114,8 +114,8 @@ function Proveedores() {
       <input
         type="text"
         placeholder="Product type"
-        value={newTipoDeProducto}
-        onChange={(e) => setNewTipoDeProducto(e.target.value)}
+        value={newTipoDeProductos}
+        onChange={(e) => setNewTipoDeProductos(e.target.value)}
       />
       <input
         type="text"
@@ -152,16 +152,16 @@ function Proveedores() {
             <label className="Label-inputs">Product Type</label>
             <input
               type="text"
-              value={tipodeproductoToEdit}
-              onChange={(e) => setTipoDeProductoToEdit(e.target.value)}
+              value={tipodeproductosToEdit}
+              onChange={(e) => setTipoDeProductosToEdit(e.target.value)}
             />
-            <label className="Label-inputs">CoMpany</label>
+            <label className="Label-inputs">Company</label>
             <input
               type="text"
               value={empresaToEdit}
               onChange={(e) => setEmpresaToEdit(e.target.value)}
             />
-            <button onClick={saveEdit}>Keep</button>
+            <button onClick={saveEdit}>Save</button>
             <button onClick={() => setEditedModalOpen(false)}>Cancel</button>
           </div>
         </div>
