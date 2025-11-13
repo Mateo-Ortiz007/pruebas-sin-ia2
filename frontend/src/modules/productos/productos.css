@@ -115,7 +115,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  width: 40px;
+  width: 30px;
+  padding: 5px;
 }
 
 /* Modal */
