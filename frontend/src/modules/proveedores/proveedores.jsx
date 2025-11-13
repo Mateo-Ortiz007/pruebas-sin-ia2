@@ -10,7 +10,7 @@ function Proveedores() {
   const [newEmpresa, setNewEmpresa] = useState("");
 
   const [marcaToEdit, setMarcaToEdit] = useState("");
-  const [tipodeproductosToEdit, setTipoDeProductosToEdit] = useState("");
+  const [tipodeproductoToEdit, setTipoDeProductoToEdit] = useState("");
   const [empresaToEdit, setEmpresaToEdit] = useState("");
 
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
@@ -49,7 +49,7 @@ function Proveedores() {
   const openEditModal = (proveedor) => {
     setProveedoresToEdit(proveedor);
     setMarcaToEdit(proveedor.marca);
-    setTipoDeProductosToEdit(proveedor.tipo_de_producto);
+    setTipoDeProductoToEdit(proveedor.tipo_de_producto);
     setEmpresaToEdit(proveedor.empresa);
     setEditedModalOpen(true);
   };
@@ -62,7 +62,7 @@ function Proveedores() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         marca: marcaToEdit,
-        tipo_de_producto: tipodeproductosToEdit,
+        tipo_de_producto: tipodeproductoToEdit,
         empresa: empresaToEdit,
       }),
     })
@@ -150,8 +150,8 @@ function Proveedores() {
             />
             <input
               type="text"
-              value={tipodeproductosToEdit}
-              onChange={(e) => setTipoDeProductosToEdit(e.target.value)}
+              value={tipodeproductoToEdit}
+              onChange={(e) => setTipoDeProductoToEdit(e.target.value)}
             />
             <input
               type="text"

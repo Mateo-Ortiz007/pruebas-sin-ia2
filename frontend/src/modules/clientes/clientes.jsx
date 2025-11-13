@@ -131,12 +131,7 @@ function Clientes() {
           onChange={(e) => setNewEmail(e.target.value)}
         />
         <label className="label-clients"> Password</label>
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={newContrasena}
-          onChange={(e) => setNewContrasena(e.target.value)}
-        />
+
         <button onClick={addCliente}>Agregar Cliente</button>
 
         {/* Lista de clientes */}
