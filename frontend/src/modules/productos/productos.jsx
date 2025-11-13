@@ -55,7 +55,7 @@ function Productos() {
     setProductosToEdit(producto);
     setEditedNombre(producto.nombre);
     setEditedTipo(producto.tipo);
-    setEditedFecha(producto.fecha);
+    setEditedFecha(producto.fecha.split("T")[0]);
     setEditedPrecio(producto.precio);
     setEditedModalOpen(true);
   };
