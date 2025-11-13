@@ -30,6 +30,8 @@
   text-align: center;
   height: 100vh;
   margin: 0;
+  border: 2px solid black;
+  padding-top: 15px;
 }
 
 .login-content h2 {
