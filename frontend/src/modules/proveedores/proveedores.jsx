@@ -6,7 +6,7 @@ function Proveedores() {
 
   const [proveedores, setProveedor] = useState([]);
   const [newMarca, setNewMarca] = useState("");
-  const [newTipoDeProductos, setNewTipoDeProductos] = useState("");
+  const [newTipoDeProducto, setNewTipoDeProducto] = useState("");
   const [newEmpresa, setNewEmpresa] = useState("");
 
   const [marcaToEdit, setMarcaToEdit] = useState("");
@@ -26,7 +26,7 @@ function Proveedores() {
   }, []);
 
   const addProvider = () => {
-    if (!newMarca || !newTipoDeProductos || !newEmpresa) return;
+    if (!newMarca || !newTipoDeProducto || !newEmpresa) return;
 
     fetch(`${API_URL}/proveedores`, {
       method: "POST",
@@ -42,7 +42,7 @@ function Proveedores() {
       .catch((err) => console.error("Error al agregar el proveedor", err));
 
     setNewMarca("");
-    setNewTipoDeProductos("");
+    setNewTipoDeProducto("");
     setNewEmpresa("");
   };
 
@@ -114,8 +114,8 @@ function Proveedores() {
       <input
         type="text"
         placeholder="Tipo de producto"
-        value={newTipoDeProductos}
-        onChange={(e) => setNewTipoDeProductos(e.target.value)}
+        value={newTipoDeProducto}
+        onChange={(e) => setNewTipoDeProducto(e.target.value)}
       />
       <input
         type="text"
