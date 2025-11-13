@@ -102,35 +102,35 @@ function Proveedores() {
 
   return (
     <div className="container-proveedores">
-      <h1>Proveedores</h1>
+      <h1>Suppliers</h1>
 
       {/* Formulario agregar proveedor */}
       <input
         type="text"
-        placeholder="Marca"
+        placeholder="Brand"
         value={newMarca}
         onChange={(e) => setNewMarca(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Tipo de producto"
+        placeholder="Product type"
         value={newTipoDeProducto}
         onChange={(e) => setNewTipoDeProducto(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Empresa"
+        placeholder="Company"
         value={newEmpresa}
         onChange={(e) => setNewEmpresa(e.target.value)}
       />
-      <button onClick={addProvider}>Agregar</button>
+      <button onClick={addProvider}>Add</button>
 
       {/* Lista de proveedores */}
       <ul>
         {proveedores.map((prov) => (
           <li key={prov.id}>
             {prov.marca} - {prov.tipo_de_productos} - {prov.empresa}
-            <button onClick={() => openEditModal(prov)}>Editar</button>
+            <button onClick={() => openEditModal(prov)}>Edit</button>
             <button onClick={() => confirmDeleteProvider(prov)}>
               Eliminar
             </button>
@@ -142,24 +142,27 @@ function Proveedores() {
       {editedModalOpen && (
         <div className="modal-proveedores">
           <div className="modal-content-proveedores">
-            <h2>Editar proveedor</h2>
+            <h2>Edit supplier</h2>
+            <label className="Label-inputs">Brand</label>
             <input
               type="text"
               value={marcaToEdit}
               onChange={(e) => setMarcaToEdit(e.target.value)}
             />
+            <label className="Label-inputs">Product Type</label>
             <input
               type="text"
               value={tipodeproductoToEdit}
               onChange={(e) => setTipoDeProductoToEdit(e.target.value)}
             />
+            <label className="Label-inputs">CoMpany</label>
             <input
               type="text"
               value={empresaToEdit}
               onChange={(e) => setEmpresaToEdit(e.target.value)}
             />
-            <button onClick={saveEdit}>Guardar</button>
-            <button onClick={() => setEditedModalOpen(false)}>Cancelar</button>
+            <button onClick={saveEdit}>Keep</button>
+            <button onClick={() => setEditedModalOpen(false)}>Cancel</button>
           </div>
         </div>
       )}
@@ -168,14 +171,14 @@ function Proveedores() {
       {deleteModalOpen && (
         <div className="modal-proveedores">
           <div className="modal-content-proveedores">
-            <h2>¿Eliminar proveedor?</h2>
+            <h2>¿ Delete Supplier?</h2>
             <p>
               {proveedortoDelete?.marca} -{" "}
               {proveedortoDelete?.tipo_de_productos} -{" "}
               {proveedortoDelete?.empresa}
             </p>
-            <button onClick={deleteProvider}>Eliminar</button>
-            <button onClick={() => setDeleteModalOpen(false)}>Cancelar</button>
+            <button onClick={deleteProvider}>Delete</button>
+            <button onClick={() => setDeleteModalOpen(false)}>Cancel</button>
           </div>
         </div>
       )}
