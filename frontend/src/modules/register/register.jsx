@@ -96,7 +96,7 @@ function Registro() {
           <div className="col">
             <label className="input-label">Document</label>
             <input
-              type="text" // para permitir maxlength
+              type="text"
               maxLength="10"
               value={newCedulaDelUsuario}
               onChange={(e) => setNewCedulaDelUsuario(e.target.value)}
@@ -116,9 +116,9 @@ function Registro() {
           </div>
         </div>
 
-        {/* Row 3 */}
+        {/* Row 3 — GENDER FULL WIDTH */}
         <div className="row">
-          <div className="col">
+          <div className="col" style={{ width: "100%" }}>
             <label className="input-label">Gender</label>
             <select
               value={newGeneroDelUsuario}
@@ -132,18 +132,18 @@ function Registro() {
           </div>
         </div>
 
-        {/* Row 4 */}
-        <div className="col">
-          <label className="input-label">Email</label>
-          <input
-            type="email"
-            value={newemail}
-            onChange={(e) => setNewEmail(e.target.value)}
-            required
-          />
-        </div>
-
+        {/* Row 4 — EMAIL + PASSWORD */}
         <div className="row">
+          <div className="col">
+            <label className="input-label">Email</label>
+            <input
+              type="email"
+              value={newemail}
+              onChange={(e) => setNewEmail(e.target.value)}
+              required
+            />
+          </div>
+
           <div className="col">
             <label className="input-label">Password</label>
             <input
@@ -153,8 +153,6 @@ function Registro() {
               required
             />
           </div>
-
-          <div className="col"></div>
         </div>
 
         <button onClick={addUsuario}>Sign up</button>
