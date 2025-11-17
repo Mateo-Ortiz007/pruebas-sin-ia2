@@ -1,6 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* MUY IMPORTANTE */
+}
+
+/* No pongas height: 100vh al body */
+body {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
 .app-layout {
   display: flex;
   height: 100vh; /* OK aquí */
+  width: 100%;
 }
 
 .main-content {
@@ -8,5 +22,6 @@
   overflow: auto; /* permite scroll, no rompe */
   padding: 0;
   margin: 0;
+  width: 100%;
   /* height: 100vh;  <-- QUITAR ESTO */
 }
