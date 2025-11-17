@@ -1,12 +1,3 @@
-body {
-  margin: 0;
-  background-color: coral;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 /* Contenedor principal */
 .products-main-container {
   background-color: coral;
