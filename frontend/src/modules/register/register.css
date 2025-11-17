@@ -18,22 +18,23 @@ body,
   align-items: center;
   height: 100vh;
   width: 100%; /* reducido un 20% desde 1000px */
-  background-color: coral;
+  background-color: #93d9e6;
+  gap: 10px;
 }
 
 /* Caja del formulario */
 .container-register {
-  background-color: #fff;
+  background-color: #eceeee;
   padding: 20px; /* reducido de 30px un 20% */
   border-radius: 20px; /* ligeramente más pequeño */
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  width: 600px;
+  width: 650px;
   display: flex;
   flex-direction: column;
   gap: 11px; /* reducido un 20% desde 15px */
   opacity: 1;
   margin-left: 20px;
-  height: 75vh;
+  height: 50vh;
 }
 
 /* Título del formulario */
@@ -50,11 +51,13 @@ body,
 .container-register select {
   padding: 8px; /* reducido un 20% desde 10px */
   border: 1px solid #ccc;
-  border-radius: 6px; /* reducido un 20% desde 8px */
+  border-radius: 12px; /* reducido un 20% desde 8px */
   font-size: 12px; /* reducido un 20% desde 14px */
   outline: none;
   transition: border-color 0.2s;
   width: 90%;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 .container-register input:focus,
@@ -72,6 +75,9 @@ body,
   border-radius: 6px; /* reducido un 20% desde 8px */
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-top: 30px;
+  width: 100px;
+  margin-left: 275px;
 }
 
 .container-register button:hover {
@@ -90,6 +96,7 @@ body,
   margin-top: 12px; /* reducido un 20% desde 20px */
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+  margin-left: 18px;
 }
 
 .linea-container {
@@ -104,4 +111,22 @@ body,
   margin: 10px 0; /* espacio arriba y abajo */
   width: 175px;
   display: flex;
+}
+
+.row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FILAS PARA ORGANIZAR INPUTS */
+.row {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }

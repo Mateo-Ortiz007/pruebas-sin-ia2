@@ -73,6 +73,7 @@ function Registro() {
           onChange={(e) => setNewNombreDeUsuario(e.target.value)}
           required
         />
+
         <label className="input-label">Last-name</label>
         <input
           type="text"
@@ -80,22 +81,25 @@ function Registro() {
           onChange={(e) => setNewApellidoDeUsuario(e.target.value)}
           required
         />
+
         <label className="input-label">Document</label>
         <input
-          type="number"
+          type="text" // cambiado a text porque maxLength NO funciona con number
           maxLength="10"
           value={newCedulaDelUsuario}
           onChange={(e) => setNewCedulaDelUsuario(e.target.value)}
           required
         />
+
         <label className="input-label">Phone</label>
         <input
-          type="number"
+          type="text" // igual, para permitir maxLength
           maxLength="10"
           value={newTelefonoDelUsuario}
           onChange={(e) => setNewTelefonoDelUsuario(e.target.value)}
           required
         />
+
         <label className="input-label">Gender</label>
         <select
           value={newGeneroDelUsuario}
@@ -106,6 +110,7 @@ function Registro() {
           <option value="Femenino">Female</option>
           <option value="Otro">Other</option>
         </select>
+
         <label className="input-label">Email</label>
         <input
           type="email"
@@ -113,6 +118,7 @@ function Registro() {
           onChange={(e) => setNewEmail(e.target.value)}
           required
         />
+
         <label className="input-label">Password</label>
         <input
           type="password"
@@ -120,6 +126,7 @@ function Registro() {
           onChange={(e) => setNewContrasena(e.target.value)}
           required
         />
+
         <button onClick={addUsuario}>Sing up</button>
       </div>
     </div>
