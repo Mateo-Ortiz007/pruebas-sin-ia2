@@ -75,7 +75,7 @@ body,
   border-radius: 6px; /* reducido un 20% desde 8px */
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-top: 30px;
+  margin-top: 25px;
   width: 100px;
   margin-left: 275px;
 }
