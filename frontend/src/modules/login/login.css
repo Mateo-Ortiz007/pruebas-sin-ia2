@@ -1,34 +1,17 @@
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
 /* ======== CONTENEDOR PRINCIPAL ======== */
 .main-container {
   display: flex;
-  height: 100vh;
   width: 100%;
-  overflow: hidden; /* evita desbordes */
-}
-
-/* ======== LADO DERECHO (IMAGEN / FONDO) ======== */
-.right-side {
-  width: 65%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* ======== LADO IZQUIERDO (LOGIN) ======== */
 .login {
   width: 35%;
   display: flex;
-  align-items: center; /* centra verticalmente */
   justify-content: center;
-  background-color: rgb(252, 252, 252);
-  padding: 20px;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 /* ======== CONTENIDO DEL LOGIN ======== */
@@ -36,26 +19,40 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   text-align: center;
 }
 
-/* Títulos */
-.login-content h2,
-.login-content .h2-login {
+/* TITULOS */
+.login-content h2 {
   font-size: 25px;
   color: #000;
-  margin: 10px 0;
+  margin-top: 20px;
 }
 
-/* ======== CAMPOS ======== */
+.h2-login {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* LINEA */
+.linea {
+  height: 2px;
+  background-color: #000;
+  width: 100%;
+  border: none;
+  margin: 20px 0;
+}
+
+/* LABELS */
 .login-content label {
   text-align: left;
+  margin-bottom: 6px;
   font-size: 16px;
   color: #000;
-  margin-top: 15px;
 }
 
+/* INPUTS */
 .login-content input {
   font-size: 15px;
   padding: 10px;
@@ -63,25 +60,24 @@ body {
   border: 1px solid #ccc;
   outline: none;
   width: 100%;
-  box-sizing: border-box;
-  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .login-content input:focus {
   border-color: #007bff;
 }
 
-/* ======== BOTÓN ======== */
+/* BOTON LOGIN */
 .login-content button {
   background-color: #93d9e6;
   font-size: 16px;
-  padding: 12px;
+  padding: 10px;
   width: 100%;
-  margin-top: 25px;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 5px;
+  margin-top: 15px;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -90,30 +86,28 @@ body {
   cursor: pointer;
 }
 
-.login-content button:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
+/* BOTON REGISTER */
+.register {
+  background-color: #5bb7c6 !important;
 }
 
-/* ======== TEXTO DE REGISTRO ======== */
-.login-content .register {
-  font-size: 16px;
-  margin-top: 20px;
-  color: #000;
+.register:hover {
+  background-color: #00758a !important;
 }
 
-/* ======== LÍNEA SEPARADORA ======== */
-.login-content .linea {
-  height: 2px;
-  background-color: #000;
-  width: 100%;
-  margin: 15px 0;
-  border: none;
-}
-
-/* ======== ERRORES ======== */
+/* ERRORES */
 .error {
   color: red;
   font-size: 13px;
-  margin-top: 5px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/* ======== LADO DERECHO (IMAGEN) ======== */
+.right-side {
+  width: 65%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
