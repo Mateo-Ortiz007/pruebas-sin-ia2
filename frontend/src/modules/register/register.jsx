@@ -63,71 +63,101 @@ function Registro() {
     <div className="container-main-register">
       <div className="container-register">
         <h2>Register</h2>
+
         <div className="linea-container">
           <hr className="linea" />
         </div>
-        <label className="input-label">Name</label>
-        <input
-          type="text"
-          value={newNombreDeUsuario}
-          onChange={(e) => setNewNombreDeUsuario(e.target.value)}
-          required
-        />
 
-        <label className="input-label">Last-name</label>
-        <input
-          type="text"
-          value={newApellidoDeUsuario}
-          onChange={(e) => setNewApellidoDeUsuario(e.target.value)}
-          required
-        />
+        {/* Row 1 */}
+        <div className="row">
+          <div className="col">
+            <label className="input-label">Name</label>
+            <input
+              type="text"
+              value={newNombreDeUsuario}
+              onChange={(e) => setNewNombreDeUsuario(e.target.value)}
+              required
+            />
+          </div>
 
-        <label className="input-label">Document</label>
-        <input
-          type="text" // cambiado a text porque maxLength NO funciona con number
-          maxLength="10"
-          value={newCedulaDelUsuario}
-          onChange={(e) => setNewCedulaDelUsuario(e.target.value)}
-          required
-        />
+          <div className="col">
+            <label className="input-label">Last-name</label>
+            <input
+              type="text"
+              value={newApellidoDeUsuario}
+              onChange={(e) => setNewApellidoDeUsuario(e.target.value)}
+              required
+            />
+          </div>
+        </div>
 
-        <label className="input-label">Phone</label>
-        <input
-          type="text" // igual, para permitir maxLength
-          maxLength="10"
-          value={newTelefonoDelUsuario}
-          onChange={(e) => setNewTelefonoDelUsuario(e.target.value)}
-          required
-        />
+        {/* Row 2 */}
+        <div className="row">
+          <div className="col">
+            <label className="input-label">Document</label>
+            <input
+              type="text" // para permitir maxlength
+              maxLength="10"
+              value={newCedulaDelUsuario}
+              onChange={(e) => setNewCedulaDelUsuario(e.target.value)}
+              required
+            />
+          </div>
 
-        <label className="input-label">Gender</label>
-        <select
-          value={newGeneroDelUsuario}
-          onChange={(e) => setNewGeneroDelUsuario(e.target.value)}
-        >
-          <option value="">Selecciona tu género</option>
-          <option value="Masculino">Masculine</option>
-          <option value="Femenino">Female</option>
-          <option value="Otro">Other</option>
-        </select>
+          <div className="col">
+            <label className="input-label">Phone</label>
+            <input
+              type="text"
+              maxLength="10"
+              value={newTelefonoDelUsuario}
+              onChange={(e) => setNewTelefonoDelUsuario(e.target.value)}
+              required
+            />
+          </div>
+        </div>
 
-        <label className="input-label">Email</label>
-        <input
-          type="email"
-          value={newemail}
-          onChange={(e) => setNewEmail(e.target.value)}
-          required
-        />
+        {/* Row 3 */}
+        <div className="row">
+          <div className="col">
+            <label className="input-label">Gender</label>
+            <select
+              value={newGeneroDelUsuario}
+              onChange={(e) => setNewGeneroDelUsuario(e.target.value)}
+            >
+              <option value="">Selecciona tu género</option>
+              <option value="Masculino">Masculine</option>
+              <option value="Femenino">Female</option>
+              <option value="Otro">Other</option>
+            </select>
+          </div>
 
-        <label className="input-label">Password</label>
-        <input
-          type="password"
-          value={newcontrasena}
-          onChange={(e) => setNewContrasena(e.target.value)}
-          required
-        />
+          <div className="col">
+            <label className="input-label">Email</label>
+            <input
+              type="email"
+              value={newemail}
+              onChange={(e) => setNewEmail(e.target.value)}
+              required
+            />
+          </div>
+        </div>
 
-        <button onClick={addUsuario}>Sing up</button>
+        {/* Row 4 */}
+        <div className="row">
+          <div className="col">
+            <label className="input-label">Password</label>
+            <input
+              type="password"
+              value={newcontrasena}
+              onChange={(e) => setNewContrasena(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="col"></div>
+        </div>
+
+        <button onClick={addUsuario}>Sign up</button>
       </div>
     </div>
   );
