@@ -130,19 +130,19 @@ function Registro() {
               <option value="Otro">Other</option>
             </select>
           </div>
-
-          <div className="col">
-            <label className="input-label">Email</label>
-            <input
-              type="email"
-              value={newemail}
-              onChange={(e) => setNewEmail(e.target.value)}
-              required
-            />
-          </div>
         </div>
 
         {/* Row 4 */}
+        <div className="col">
+          <label className="input-label">Email</label>
+          <input
+            type="email"
+            value={newemail}
+            onChange={(e) => setNewEmail(e.target.value)}
+            required
+          />
+        </div>
+
         <div className="row">
           <div className="col">
             <label className="input-label">Password</label>
